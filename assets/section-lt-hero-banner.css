@@ -1,0 +1,194 @@
+.section--tl-hero-banner {
+    display: block;
+}
+
+.tl-hero-banner {
+  position: relative;
+  min-height: var(--tl-hero-height-desktop);
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--tl-hero-text-color);
+  background-color: var(--tl-hero-video-background);
+}
+
+.tl-hero-banner__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background-color: var(--tl-hero-video-background);
+}
+
+
+/*
+ * Layer 1: Background video
+ *
+ * The video element occupies the entire section.
+ * The Video fit setting controls whether it crops or letterboxes.
+ */
+.tl-hero-banner__video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: var(--tl-hero-video-fit);
+  object-position: center;
+  background-color: var(--tl-hero-video-background);
+}
+
+.tl-hero-banner__video-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tl-hero-banner__placeholder-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tl-hero-video-background);
+}
+
+/*
+ * Layer 2: Linear-gradient overlay
+ */
+.tl-hero-banner__linear-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    var(--tl-hero-linear-direction),
+    transparent 0%,
+    var(--tl-hero-linear-color) 100%
+  );
+  opacity: var(--tl-hero-linear-opacity);
+  pointer-events: none;
+}
+
+/*
+ * Layer 3: Grain-texture overlay
+ */
+.tl-hero-banner__grain-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: var(--tl-hero-grain-opacity);
+  pointer-events: none;
+}
+
+/*
+ * Layer 4: Hero content
+ */
+.tl-hero-banner__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  min-height: var(--tl-hero-height-desktop);
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+}
+
+.tl-hero-banner__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--tl-hero-content-max-width);
+}
+
+.tl-hero-banner__heading {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-heading-family);
+  font-size: clamp(4rem, 5vw, 7.2rem);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+.tl-hero-banner__body {
+  max-width: 64rem;
+  margin-top: auto;
+  color: inherit;
+  font-family: var(--font-body-family);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.tl-hero-banner__body > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+/* Vertical content position */
+
+.tl-hero-banner--vertical-top .tl-hero-banner__content {
+  align-items: flex-start;
+}
+
+.tl-hero-banner--vertical-center .tl-hero-banner__content {
+  align-items: center;
+}
+
+.tl-hero-banner--vertical-bottom .tl-hero-banner__content {
+  align-items: flex-end;
+}
+
+/* Horizontal content position */
+
+.tl-hero-banner--horizontal-left .tl-hero-banner__content {
+  justify-content: flex-start;
+}
+
+.tl-hero-banner--horizontal-left .tl-hero-banner__text-wrapper {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.tl-hero-banner--horizontal-center .tl-hero-banner__content {
+  justify-content: center;
+}
+
+.tl-hero-banner--horizontal-center .tl-hero-banner__text-wrapper {
+  align-items: center;
+  text-align: center;
+}
+
+.tl-hero-banner--horizontal-right .tl-hero-banner__content {
+  justify-content: flex-end;
+}
+
+.tl-hero-banner--horizontal-right .tl-hero-banner__text-wrapper {
+  align-items: flex-end;
+  text-align: right;
+}
+
+@media screen and (max-width: 749px) {
+  .tl-hero-banner {
+    min-height: var(--tl-hero-height-mobile);
+  }
+
+  .tl-hero-banner__content {
+    min-height: var(--tl-hero-height-mobile);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .tl-hero-banner__heading {
+    font-size: clamp(3.6rem, 11vw, 5.2rem);
+    line-height: 1;
+  }
+
+  .tl-hero-banner__body {
+    font-size: 1.4rem;
+  }
+}

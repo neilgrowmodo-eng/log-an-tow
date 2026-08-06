@@ -17,7 +17,8 @@
     image_upload: block_settings.image_upload,
     width: block_settings.width,
     class_name: icon_block_class,
-    attributes: block.shopify_attributes
+    attributes: block.shopify_attributes,
+    custom_class: block_settings.custom_class
   %}
 {% endcapture %}
 
@@ -51,6 +52,12 @@
   "name": "t:names.icon",
   "class": "icon-block",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class",
+      "info": "Enter a custom CSS class for this icon"
+    },
     {
       "type": "select",
       "id": "icon",

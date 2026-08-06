@@ -1,0 +1,305 @@
+{{ 'section-lt-hero-banner.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign background_video = section.settings.background_video
+  assign grain_overlay = section.settings.grain_overlay
+-%}
+
+{%- style -%}
+  :root {
+    --tl-hero-height-desktop: {{ section.settings.height_desktop }}px;
+    --tl-hero-height-mobile: {{ section.settings.height_mobile }}px;
+
+    --tl-hero-content-max-width: {{ section.settings.content_max_width }}px;
+    --tl-hero-text-color: {{ section.settings.text_color }};
+
+    --tl-hero-video-fit: {{ section.settings.video_fit }};
+    --tl-hero-video-background: {{ section.settings.video_background_color }};
+
+    --tl-hero-linear-color: {{ section.settings.linear_overlay_color }};
+    --tl-hero-linear-opacity: {{ section.settings.linear_overlay_opacity | divided_by: 100.0 }};
+    --tl-hero-linear-direction: {{ section.settings.linear_overlay_direction }};
+
+    --tl-hero-grain-opacity: {{ section.settings.grain_overlay_opacity | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
+
+<section
+  id="TlHeroBanner-{{ section.id }}"
+  class="
+    tl-hero-banner
+    tl-hero-banner--vertical-{{ section.settings.vertical_position }}
+    tl-hero-banner--horizontal-{{ section.settings.horizontal_position }}
+  "
+>
+  <div class="tl-hero-banner__media" aria-hidden="true">
+    {%- if background_video != blank -%}
+      {{
+        background_video
+        | video_tag:
+          autoplay: true,
+          loop: true,
+          muted: true,
+          controls: false,
+          playsinline: true,
+          preload: 'metadata',
+          class: 'tl-hero-banner__video'
+      }}
+    {%- else -%}
+      <div class="tl-hero-banner__video-placeholder">
+        {{
+          'lifestyle-2'
+          | placeholder_svg_tag: 'tl-hero-banner__placeholder-svg'
+        }}
+      </div>
+    {%- endif -%}
+
+    <div class="tl-hero-banner__linear-overlay"></div>
+
+    {%- if grain_overlay != blank -%}
+      {{
+        grain_overlay
+        | image_url: width: 3000
+        | image_tag:
+          class: 'tl-hero-banner__grain-overlay',
+          loading: 'eager',
+          widths: '750, 1100, 1500, 1780, 2000, 2500, 3000',
+          sizes: '100vw',
+          alt: ''
+      }}
+    {%- endif -%}
+  </div>
+
+  <div class="tl-hero-banner__content page-width">
+    <div class="tl-hero-banner__text-wrapper">
+      {%- if section.settings.heading != blank -%}
+        <h1 class="tl-hero-banner__heading">
+          {{ section.settings.heading | newline_to_br }}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.body_text != blank -%}
+        <div class="tl-hero-banner__body rte">
+          {{ section.settings.body_text }}
+        </div>
+      {%- endif -%}
+
+      {% comment %}
+        The reusable button/container blocks can be added here later.
+      {% endcomment %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TL Hero Banner",
+  "tag": "section",
+  "class": "section section--tl-hero-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background video"
+    },
+    {
+      "type": "video",
+      "id": "background_video",
+      "label": "Background video",
+      "info": "Select a Shopify-hosted video. The video will autoplay, loop, and remain muted."
+    },
+    {
+      "type": "select",
+      "id": "video_fit",
+      "label": "Video fit",
+      "options": [
+        {
+          "value": "contain",
+          "label": "Show full video without cropping"
+        },
+        {
+          "value": "cover",
+          "label": "Fill section and allow cropping"
+        }
+      ],
+      "default": "contain",
+      "info": "Contain shows the complete video but may leave empty space. Cover fills the section but may crop its edges."
+    },
+    {
+      "type": "color",
+      "id": "video_background_color",
+      "label": "Video background color",
+      "default": "#000000",
+      "info": "Visible behind the video when the full video is shown without cropping."
+    },
+    {
+      "type": "header",
+      "content": "Linear overlay"
+    },
+    {
+      "type": "color",
+      "id": "linear_overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "linear_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 45
+    },
+    {
+      "type": "select",
+      "id": "linear_overlay_direction",
+      "label": "Overlay direction",
+      "options": [
+        {
+          "value": "to bottom",
+          "label": "Darken bottom"
+        },
+        {
+          "value": "to top",
+          "label": "Darken top"
+        },
+        {
+          "value": "to right",
+          "label": "Darken right"
+        },
+        {
+          "value": "to left",
+          "label": "Darken left"
+        }
+      ],
+      "default": "to bottom"
+    },
+    {
+      "type": "header",
+      "content": "Grain overlay"
+    },
+    {
+      "type": "image_picker",
+      "id": "grain_overlay",
+      "label": "Grain overlay image",
+      "info": "Upload a transparent grain or texture image to display over the background video."
+    },
+    {
+      "type": "range",
+      "id": "grain_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Grain opacity",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Trusted Marine Towing\nand Log Salvage on\nthe Fraser River"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>Delivering reliable towing, salvage, and vessel assistance across the Lower Mainland’s waterways.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Content maximum width",
+      "default": 700
+    },
+    {
+      "type": "header",
+      "content": "Content position"
+    },
+    {
+      "type": "select",
+      "id": "vertical_position",
+      "label": "Vertical position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_position",
+      "label": "Horizontal position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Section height"
+    },
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "min": 400,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "label": "Desktop height",
+      "default": 720
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "min": 400,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Mobile height",
+      "default": 600
+    }
+  ],
+  "presets": [
+    {
+      "name": "TL Hero Banner"
+    }
+  ]
+}
+{% endschema %}

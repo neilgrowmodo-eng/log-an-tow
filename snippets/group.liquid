@@ -29,6 +29,7 @@
     border-style
     spacing-style
     size-style
+    {{ settings.section_class }}
     {{ class }}
     {% if background_color != blank %} color-custom-{{ block_id }}{% endif %}
   "
@@ -72,6 +73,7 @@
       layout-panel-flex
       layout-panel-flex--{{ settings.content_direction | default: 'column' }}
       {% if settings.vertical_on_mobile %} mobile-column{% endif %}
+      {{ settings.custom_class }}
     "
     style="{% render 'layout-panel-style', settings: settings %}"
   >
