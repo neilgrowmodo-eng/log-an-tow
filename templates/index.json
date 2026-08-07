@@ -11,6 +11,7 @@
   "sections": {
     "l_t_hero_XJCJec": {
       "type": "L-T-hero",
+      "disabled": true,
       "name": "LT Hero Banner",
       "settings": {
         "background_video": "shopify://files/videos/0_Export_Timber_1920x1080.mp4",
@@ -31,6 +32,238 @@
         "height_mobile": 600
       }
     },
+    "section_EechWc": {
+      "type": "section",
+      "blocks": {
+        "group_cJg99y": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "custom_class": "",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_WieUyM": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "custom_class": "",
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_PifBgG": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "custom_class": "fw-400  ls-n2 lh-1p1",
+                    "text": "<h1>Trusted Marine Towing <br/>and Log Salvage on <br/>the Fraser River</h1>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "{{ settings.color_palette.color2 }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_PifBgG"
+              ]
+            }
+          },
+          "block_order": [
+            "group_WieUyM"
+          ]
+        },
+        "group_q3hPng": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "custom_class": "",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_MkfTUE": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "custom_class": "",
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "{{ settings.color_palette.color2 }}",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_MkfTUE"
+          ]
+        }
+      },
+      "block_order": [
+        "group_cJg99y",
+        "group_q3hPng"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "custom_class": "",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "space-between",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "background_media": "video",
+        "background_color": "",
+        "video": "shopify://files/videos/0_Export_Timber_1920x1080.mp4",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 40,
+        "padding-block-end": 0
+      }
+    },
     "section_mBiQbj": {
       "type": "section",
       "blocks": {
@@ -38,7 +271,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
-            "custom_class": "",
+            "custom_class": "pdg-bottom_40 pdg-top_40  bdr-bottom",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
@@ -79,7 +312,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "custom_class": "certified-text",
+                "custom_class": "certified-text fs-16 lh-1p6 ls-10",
                 "text": "<p>CERTIFIED AND LICENSED <br/>TO OPERATE IN BC, CANADA</p>",
                 "width": "fit-content",
                 "max_width": "normal",
@@ -139,8 +372,8 @@
                 "placeholder": "",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-start": 70,
+                "padding-inline-end": 70
               },
               "blocks": {
                 "icon_98dFiN": {
@@ -277,7 +510,7 @@
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "space-between",
-                "vertical_alignment": "center",
+                "vertical_alignment": "flex-start",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
@@ -321,7 +554,7 @@
                     "vertical_alignment": "center",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "flex-start",
                     "gap": 12,
                     "width": "fit-content",
                     "custom_width": 100,
@@ -355,7 +588,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "custom_class": "",
+                        "custom_class": "fs-40 ls-n2 fw-400",
                         "text": "<h2>Local Waterway<br/>Experience You<br/>Can Count On</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
@@ -371,7 +604,7 @@
                         "background": false,
                         "background_color": "#00000026",
                         "corner_radius": 0,
-                        "padding-block-start": 0,
+                        "padding-block-start": 40,
                         "padding-block-end": 0,
                         "padding-inline-start": 0,
                         "padding-inline-end": 0
@@ -545,7 +778,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "custom_class": "who-we-are-text",
+                        "custom_class": "tl-small-heading ls-10",
                         "text": "<p>WHO WE ARE</p>",
                         "width": "fit-content",
                         "max_width": "normal",
@@ -586,8 +819,8 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
-                    "width": "fill",
-                    "custom_width": 100,
+                    "width": "custom",
+                    "custom_width": 60,
                     "width_mobile": "fill",
                     "custom_width_mobile": 100,
                     "height": "fit",
@@ -618,7 +851,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "custom_class": "",
+                        "custom_class": "fs-24 lh-1p5",
                         "text": "<p>Log an' Tow is a marine service company operating throughout the Fraser River and surrounding Lower Mainland waterways. With hands-on experience navigating local conditions, our team supports residential and commercial clients who need dependable towing, salvage, and marine assistance. Every job is approached with a focus on safety, practical problem solving, and getting the work done right.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
@@ -645,6 +878,7 @@
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
+                        "custom_class": "tl-sweep-button tl-sweep-button_color-1",
                         "label": "REQUEST SERVICE",
                         "link": "shopify://collections/all",
                         "open_in_new_tab": false,
@@ -761,15 +995,15 @@
     "section_gM8Jfk": {
       "type": "section",
       "blocks": {
-        "group_xrcrUH": {
+        "group_Y8BCDB": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
-            "custom_class": "marine-services-container",
+            "custom_class": "bdr-top bdr-gold",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
+            "vertical_alignment": "flex-start",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
@@ -781,7 +1015,7 @@
             "height": "fit",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "#00000000",
+            "background_color": "rgba(0,0,0,0)",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
@@ -802,7 +1036,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_9R8MKd": {
+            "group_E6R9Qf": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -813,7 +1047,7 @@
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
                 "width": "fill",
                 "custom_width": 100,
@@ -843,11 +1077,11 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_rbPVbX": {
+                "text_UqJdTr": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "",
+                    "custom_class": "tl-small-heading ls-10",
                     "text": "<p>WHAT WE DO</p>",
                     "width": "fit-content",
                     "max_width": "normal",
@@ -872,10 +1106,10 @@
                 }
               },
               "block_order": [
-                "text_rbPVbX"
+                "text_UqJdTr"
               ]
             },
-            "group_pzd7CC": {
+            "group_6jQq3T": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -887,7 +1121,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 0,
                 "width": "custom",
                 "custom_width": 70,
                 "width_mobile": "fill",
@@ -916,20 +1150,20 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_zKizzj": {
+                "text_JhCEmx": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "",
+                    "custom_class": "fw-400 ls-n2 fs-40",
                     "text": "<h3>Marine Services Built for<br/>the Water You Work On</h3>",
                     "width": "fit-content",
-                    "max_width": "normal",
+                    "max_width": "narrow",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "font_size": "2.5rem",
                     "line_height": "normal",
-                    "letter_spacing": "normal",
+                    "letter_spacing": "tight",
                     "case": "none",
                     "wrap": "pretty",
                     "text_color": "",
@@ -937,13 +1171,13 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 50,
-                    "padding-block-end": 0,
+                    "padding-block-end": 24,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {}
                 },
-                "text_EpPhEE": {
+                "text_cDHBNU": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
@@ -972,19 +1206,74 @@
                 }
               },
               "block_order": [
-                "text_zKizzj",
-                "text_EpPhEE"
+                "text_JhCEmx",
+                "text_cDHBNU"
               ]
             }
           },
           "block_order": [
-            "group_9R8MKd",
-            "group_pzd7CC"
+            "group_E6R9Qf",
+            "group_6jQq3T"
+          ]
+        },
+        "group_qtpczL": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "custom_class": "",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "custom_liquid_BHARfA": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "custom_liquid_BHARfA"
           ]
         }
       },
       "block_order": [
-        "group_xrcrUH"
+        "group_Y8BCDB",
+        "group_qtpczL"
       ],
       "name": "t:names.custom_section",
       "settings": {
@@ -1040,7 +1329,7 @@
             "height": "fit",
             "custom_height": 100,
             "background_media": "none",
-            "background_color": "#00000000",
+            "background_color": "rgba(0,0,0,0)",
             "video_position": "cover",
             "background_image_position": "cover",
             "toggle_overlay": false,
@@ -1106,8 +1395,8 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "",
-                    "text": "<p>WHAT WE DO</p>",
+                    "custom_class": "tl-small-heading ls-10",
+                    "text": "<p>WHY LOG AN' TOW</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1146,7 +1435,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 0,
                 "width": "custom",
                 "custom_width": 70,
                 "width_mobile": "fill",
@@ -1179,19 +1468,19 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "",
-                    "text": "<h3>Marine Services Built for<br/>the Water You Work On</h3>",
+                    "custom_class": "fs-40 ls-n2 fw-400",
+                    "text": "<h3>Built on Local Knowledge and Practical Experience</h3>",
                     "width": "fit-content",
-                    "max_width": "normal",
+                    "max_width": "narrow",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
-                    "font_size": "1rem",
+                    "font_size": "2.5rem",
                     "line_height": "normal",
-                    "letter_spacing": "normal",
+                    "letter_spacing": "tight",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "",
+                    "text_color": "{{ settings.color_palette.color1 }}",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -1247,15 +1536,15 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
-                    "custom_class": "",
+                    "custom_class": "bdr-top pdg-top_24  pdg-bottom_24 bdr-dark",
                     "content_direction": "row",
                     "vertical_on_mobile": true,
                     "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
+                    "vertical_alignment": "flex-start",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 24,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -1290,7 +1579,8 @@
                       "settings": {
                         "custom_class": "",
                         "icon": "price_tag",
-                        "width": 24,
+                        "image_upload": "shopify://shop_images/fi_11015745.png",
+                        "width": 40,
                         "link": "",
                         "open_in_new_tab": false,
                         "icon_color": ""
@@ -1309,7 +1599,7 @@
                         "align_baseline": false,
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
-                        "gap": 12,
+                        "gap": 0,
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1343,18 +1633,18 @@
                           "name": "t:names.heading",
                           "settings": {
                             "custom_class": "",
-                            "text": "<h3>Local Waterway Knowledge</h3>",
+                            "text": "<h4>Local Waterway Knowledge</h4>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "type_preset": "custom",
+                            "font": "var(--font-heading--family)",
+                            "font_size": "1.25rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
-                            "text_color": "",
+                            "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
                             "corner_radius": 0,
@@ -1371,12 +1661,12 @@
                           "settings": {
                             "custom_class": "",
                             "text": "<p>Deep familiarity with Fraser River conditions and Lower Mainland waterways.</p>",
-                            "width": "fit-content",
-                            "max_width": "normal",
+                            "width": "100%",
+                            "max_width": "none",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "custom",
                             "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "font_size": "1.125rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
@@ -1408,15 +1698,15 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
-                    "custom_class": "",
+                    "custom_class": "bdr-top pdg-top_24  pdg-bottom_24 bdr-dark",
                     "content_direction": "row",
                     "vertical_on_mobile": true,
                     "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
+                    "vertical_alignment": "flex-start",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 24,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -1451,7 +1741,8 @@
                       "settings": {
                         "custom_class": "",
                         "icon": "price_tag",
-                        "width": 24,
+                        "image_upload": "shopify://shop_images/fi_9368849.png",
+                        "width": 40,
                         "link": "",
                         "open_in_new_tab": false,
                         "icon_color": ""
@@ -1470,7 +1761,7 @@
                         "align_baseline": false,
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
-                        "gap": 12,
+                        "gap": 0,
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1504,18 +1795,18 @@
                           "name": "t:names.heading",
                           "settings": {
                             "custom_class": "",
-                            "text": "<h3>Local Waterway Knowledge</h3>",
+                            "text": "<h3>Reliable and Responsive</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "custom",
                             "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "font_size": "1.25rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
-                            "text_color": "",
+                            "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
                             "corner_radius": 0,
@@ -1531,13 +1822,13 @@
                           "name": "t:names.text",
                           "settings": {
                             "custom_class": "",
-                            "text": "<p>Deep familiarity with Fraser River conditions and Lower Mainland waterways.</p>",
+                            "text": "<p>Straightforward communication and dependable service when you need it.</p>",
                             "width": "fit-content",
-                            "max_width": "normal",
+                            "max_width": "none",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "custom",
                             "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "font_size": "1.125rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
@@ -1569,15 +1860,15 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
-                    "custom_class": "",
+                    "custom_class": "bdr-top pdg-top_24  pdg-bottom_24 bdr-dark",
                     "content_direction": "row",
                     "vertical_on_mobile": true,
                     "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
+                    "vertical_alignment": "flex-start",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 24,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -1612,7 +1903,8 @@
                       "settings": {
                         "custom_class": "",
                         "icon": "price_tag",
-                        "width": 24,
+                        "image_upload": "shopify://shop_images/fi_5797037.png",
+                        "width": 40,
                         "link": "",
                         "open_in_new_tab": false,
                         "icon_color": ""
@@ -1631,7 +1923,7 @@
                         "align_baseline": false,
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
-                        "gap": 12,
+                        "gap": 0,
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1665,18 +1957,18 @@
                           "name": "t:names.heading",
                           "settings": {
                             "custom_class": "",
-                            "text": "<h3>Local Waterway Knowledge</h3>",
+                            "text": "<h3>Specialized Marine Equipment</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "custom",
                             "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "font_size": "1.25rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
-                            "text_color": "",
+                            "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
                             "corner_radius": 0,
@@ -1692,13 +1984,13 @@
                           "name": "t:names.text",
                           "settings": {
                             "custom_class": "",
-                            "text": "<p>Deep familiarity with Fraser River conditions and Lower Mainland waterways.</p>",
+                            "text": "<p>Equipped for towing, salvage, and recovery work across varied conditions.</p>",
                             "width": "fit-content",
-                            "max_width": "normal",
+                            "max_width": "none",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "custom",
                             "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "font_size": "1.125rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
@@ -1730,15 +2022,15 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
-                    "custom_class": "",
+                    "custom_class": "bdr-top pdg-top_24 pdg-bottom_24 bdr-dark",
                     "content_direction": "row",
                     "vertical_on_mobile": true,
                     "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
+                    "vertical_alignment": "flex-start",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
+                    "gap": 24,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -1773,7 +2065,8 @@
                       "settings": {
                         "custom_class": "",
                         "icon": "price_tag",
-                        "width": 24,
+                        "image_upload": "shopify://shop_images/Group.png",
+                        "width": 40,
                         "link": "",
                         "open_in_new_tab": false,
                         "icon_color": ""
@@ -1792,7 +2085,7 @@
                         "align_baseline": false,
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
-                        "gap": 12,
+                        "gap": 0,
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -1826,18 +2119,18 @@
                           "name": "t:names.heading",
                           "settings": {
                             "custom_class": "",
-                            "text": "<h3>Local Waterway Knowledge</h3>",
+                            "text": "<h3>Safety First</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "custom",
                             "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "font_size": "1.25rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
-                            "text_color": "",
+                            "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
                             "corner_radius": 0,
@@ -1855,11 +2148,11 @@
                             "custom_class": "",
                             "text": "<p>Deep familiarity with Fraser River conditions and Lower Mainland waterways.</p>",
                             "width": "fit-content",
-                            "max_width": "normal",
+                            "max_width": "none",
                             "alignment": "left",
-                            "type_preset": "rte",
+                            "type_preset": "custom",
                             "font": "var(--font-body--family)",
-                            "font_size": "1rem",
+                            "font_size": "1.125rem",
                             "line_height": "normal",
                             "letter_spacing": "normal",
                             "case": "none",
@@ -1942,6 +2235,7 @@
   },
   "order": [
     "l_t_hero_XJCJec",
+    "section_EechWc",
     "section_mBiQbj",
     "section_gM8Jfk",
     "section_aJPbRi"

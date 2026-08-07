@@ -12,6 +12,14 @@ body {
   font-variation-settings: 'slnt' 0;
 }
 
+@font-face {
+  font-family: "Oscan Expanded";
+  src: url("https://cdn.shopify.com/s/files/1/0735/9889/4233/files/Oscan_Expanded.woff2?v=1786079983")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --hover-lift-amount: 4px;
   --hover-scale-amount: 1.03;
@@ -23,6 +31,7 @@ body {
   --surface-transition-timing: var(--ease-out-quad);
   --submenu-animation-speed: 360ms;
   --submenu-animation-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --font-heading--family: "Oscan Expanded", sans-serif;
 }
 
 html {
@@ -165,6 +174,15 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oscan Expanded", sans-serif;
 }
 
 .wrap-text {
@@ -698,7 +716,7 @@ h1,
 .h1.h1,
 .text-block.h1 > *,
 .text-block.h1 :is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-h1--family);
+  font-family: "Oscan Expanded", sans-serif;
   font-style: var(--font-h1--style);
   font-weight: var(--font-h1--weight);
   font-size: var(--font-h1--size);
@@ -720,7 +738,7 @@ h2,
 .h2.h2,
 .text-block.h2 > *,
 .text-block.h2 :is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-h2--family);
+  font-family: "Oscan Expanded", sans-serif;
   font-style: var(--font-h2--style);
   font-weight: var(--font-h2--weight);
   font-size: var(--font-h2--size);
@@ -743,7 +761,7 @@ h3,
 .h3.h3,
 .text-block.h3 > *,
 .text-block.h3 :is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-h3--family);
+  font-family: "Oscan Expanded", sans-serif;
   font-style: var(--font-h3--style);
   font-weight: var(--font-h3--weight);
   font-size: var(--font-h3--size);
@@ -765,7 +783,7 @@ h4,
 .h4.h4,
 .text-block.h4 > *,
 .text-block.h4 :is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-h4--family);
+  font-family: "Oscan Expanded", sans-serif;
   font-style: var(--font-h4--style);
   font-weight: var(--font-h4--weight);
   font-size: var(--font-h4--size);
@@ -787,7 +805,7 @@ h5,
 .h5.h5,
 .text-block.h5 > *,
 .text-block.h5 :is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-h5--family);
+  font-family: "Oscan Expanded", sans-serif;
   font-style: var(--font-h5--style);
   font-weight: var(--font-h5--weight);
   font-size: var(--font-h5--size);
@@ -809,7 +827,7 @@ h6,
 .h6.h6,
 .text-block.h6 > *,
 .text-block.h6 :is(h1, h2, h3, h4, h5, h6) {
-  font-family: var(--font-h6--family);
+  font-family: "Oscan Expanded", sans-serif;
   font-style: var(--font-h6--style);
   font-weight: var(--font-h6--weight);
   font-size: var(--font-h6--size);
@@ -1405,12 +1423,14 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) .volume-pricing-note {
 .custom-typography {
   h1 {
     line-height: var(--line-height--display, var(--line-height));
+    font-family: "Oscan Expanded", sans-serif;
   }
 
   h2,
   h3,
   h4 {
     line-height: var(--line-height--heading, var(--line-height));
+    font-family: "Oscan Expanded", sans-serif;
   }
 
   p {
@@ -2256,30 +2276,92 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   z-index: 1;
 }
 
-.bdr-top {border-top: 1px solid;}
-.bdr-left {border-left: 1px solid;}
-.bdr-right {border-right: 1px solid;}
-.bdr-bottom {border-bottom: 1px solid;}
+.bdr-top {border-top: 0.5px solid;}
+.bdr-left {border-left: 0.5px solid;}
+.bdr-right {border-right: 0.5px solid;}
+.bdr-bottom {border-bottom: 0.5px solid;}
 
 .pdg-top_40 {padding-top: 40px;}
 .pdg-bottom_40 {padding-bottom: 40px;}
 .pdg-left_40 {padding-left: 40px;}
 .pdg-right_40 {padding-right: 40px;}
+.pdg-top_24 {padding-top: 24px;}
+.pdg-bottom_24 {padding-bottom: 24px;}
+.pdg-left_24 {padding-left: 24px;}
+.pdg-right_24 {padding-right: 24px;}
 .pdg-top_20 {padding-top: 20px;}
 .pdg-bottom_20 {padding-bottom: 20px;}
 .pdg-left_20 {padding-left: 20px;}
 .pdg-right_20 {padding-right: 20px;}
 
+
+.fs-10 > * {font-size: 10px;}
+.fs-12 > * {font-size: 12px;}
+.fs-14 > * {font-size: 14px;}
+.fs-16 > * {font-size: 16px;}
+.fs-18 > * {font-size: 18px;}
+.fs-20 > * {font-size: 20px;}
+.fs-24 > * {font-size: 24px;}
+.fs-32 > * {font-size: 32px;}
+.fs-40 > * {font-size: 40px;}
+.fs-48 > * {font-size: 48px;}
+.fs-56 > * {font-size: 56px;}
+.fs-72 > * {font-size: 72px;}
+
+.ls-n2 > *{letter-spacing: -2%;}
+.ls-10 > *{letter-spacing: 0.1em;}
 .bdr-gold {
   border-color: #D4A857;
 }
+
+.fw-400 > * {font-weight: 400;}
+.fw-500 > * {font-weight: 500;}
+
+.lh-1p5 > * {line-height: 1.5;}
+.lh-1p1 > * {line-height: 1.1;}
+.lh-1p6 > * {line-height: 1.6;}
+
+.uppercase > * {text-transform: uppercase;}
 
 .bdr-dark {
   border-color: #32373E;
 }
 
-.marine-services-container {
-  border-top: 1px solid #D4A857;
+.tl-small-heading::before {
+  content: none;
 }
 
-.marine-services-bl
+.tl-small-heading p {
+  margin: 0;
+}
+
+.tl-small-heading p::before {
+  content: "";
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.6em;
+  background-color: #d4a857;
+  vertical-align: 0.02em;
+}
+
+.tl-footer-link::before {
+  content: none;
+}
+
+.tl-footer-link > * {
+  margin: 0;
+}
+
+.tl-footer-link > *::before {
+  content: "\279c";
+  color: #fff;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.2em;
+  margin-right: .6em;
+  background-color: #1f4e39;
+  vertical-align: .02em;
+  padding-top: 10px;
+  padding-left: 7px;
+}

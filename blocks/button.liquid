@@ -1,11 +1,17 @@
 
-{% render 'button', link: block.settings.link %}
+{% render 'button', link: block.settings.link, class: block.settings.custom_class %}
 
 {% schema %}
 {
   "name": "t:names.button",
   "tag": null,
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class",
+      "info": "Enter a custom CSS class for this block"
+    },
     {
       "type": "text",
       "id": "label",

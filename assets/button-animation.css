@@ -1,0 +1,275 @@
+/* ============================================================
+   TL SWEEP BUTTON
+   Figma-inspired button hover animation
+   ============================================================ */
+
+.tl-sweep-button {
+  --tl-sweep-duration: 1.250123s;
+
+  --tl-sweep-easing: linear(
+    0,
+    0.0216,
+    0.0747,
+    0.1458,
+    0.2255,
+    0.3076,
+    0.3879,
+    0.4638,
+    0.5339,
+    0.5974,
+    0.6542,
+    0.7044,
+    0.7484,
+    0.7866,
+    0.8196,
+    0.8479,
+    0.8722,
+    0.8928,
+    0.9103,
+    0.9251,
+    0.9375,
+    0.948,
+    0.9568,
+    0.9642,
+    0.9703,
+    0.9754,
+    0.9797,
+    0.9832,
+    0.9862,
+    0.9886,
+    0.9906,
+    0.9923,
+    0.9936,
+    0.9948,
+    0.9957,
+    0.9965,
+    0.9971,
+    0.9976,
+    0.9981,
+    0.9984,
+    0.9987,
+    0.9989,
+    0.9991,
+    0.9993,
+    0.9994,
+    0.9995,
+    0.9996,
+    0.9997,
+    0.9997,
+    0.9998,
+    0.9998
+  );
+
+  --tl-marker-size: 20px;
+  --tl-marker-start: 5px;
+  --tl-marker-end-gap: 5px;
+
+  --tl-padding-left: 28px;
+  --tl-padding-right: 28px;
+
+  --tl-padding-left-hover: 28px;
+  --tl-padding-right-hover: 28px;
+
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: var(--tl-padding-left);
+  padding-right: var(--tl-padding-right);
+
+  overflow: hidden;
+  isolation: isolate;
+
+  transition:
+    padding-left var(--tl-sweep-duration) var(--tl-sweep-easing),
+    padding-right var(--tl-sweep-duration) var(--tl-sweep-easing),
+    border-radius var(--tl-sweep-duration) var(--tl-sweep-easing);
+}
+
+.tl-sweep-button_color-1 {
+    --tl-marker-color: #F6F1E7;
+    --tl-arrow-color: #26313c;
+}
+
+.tl-sweep-button_color-2 {
+    --tl-marker-color: #D4A857;
+    --tl-arrow-color: #F6F1E7;
+}
+
+
+/* ------------------------------------------------------------
+   Moving square / final circle
+   ------------------------------------------------------------ */
+
+.tl-sweep-button::before {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+
+  top: 50%;
+  left: var(--tl-marker-start);
+
+  width: var(--tl-marker-size);
+  height: var(--tl-marker-size);
+
+  transform: translateY(-50%);
+
+  background: var(--tl-marker-color);
+
+  border-radius: 0;
+
+  pointer-events: none;
+
+  /* fallback easing */
+  transition:
+    left var(--tl-sweep-duration) cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius var(--tl-sweep-duration) cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* exact Figma easing */
+  transition:
+    left var(--tl-sweep-duration) var(--tl-sweep-easing),
+    border-radius var(--tl-sweep-duration) var(--tl-sweep-easing);
+}
+
+
+/* ------------------------------------------------------------
+   Arrow appearing inside marker
+   ------------------------------------------------------------ */
+
+.tl-sweep-button::after {
+  content: "→";
+
+  position: absolute;
+  z-index: 3;
+
+  top: 50%;
+  left: var(--tl-marker-start);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--tl-marker-size);
+  height: var(--tl-marker-size);
+
+  transform: translateY(-50%);
+
+  color: var(--tl-arrow-color);
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    left var(--tl-sweep-duration) var(--tl-sweep-easing),
+    opacity 0.15s ease;
+}
+
+
+/* ------------------------------------------------------------
+   Hover movement
+   ------------------------------------------------------------ */
+
+.tl-sweep-button:hover {
+  padding-left: var(--tl-padding-left-hover);
+  padding-right: var(--tl-padding-right-hover);
+}
+
+
+.tl-sweep-button:hover::before,
+.tl-sweep-button:hover::after {
+  left: calc(
+    100% - var(--tl-marker-size) - var(--tl-marker-end-gap)
+  );
+}
+
+
+.tl-sweep-button:hover::before {
+  border-radius: 50%;
+}
+
+
+/*
+  Let the square travel most of the way across the button
+  before revealing the arrow.
+*/
+.tl-sweep-button:hover::after {
+  opacity: 1;
+  transition-delay: 0s, 0.72s;
+}
+
+
+/* Reset arrow immediately when hover leaves */
+.tl-sweep-button:not(:hover)::after {
+  transition-delay: 0s;
+}
+
+
+
+/* ============================================================
+   FILLED VERSION
+   Example: REQUEST SERVICE
+   ============================================================ */
+
+.tl-sweep-button--filled {
+  --tl-marker-size: 20px;
+
+  --tl-marker-start: 24px;
+  --tl-marker-end-gap: 24px;
+
+  --tl-padding-left: 53px;
+  --tl-padding-right: 24px;
+
+  --tl-padding-left-hover: 24px;
+  --tl-padding-right-hover: 53px;
+
+  --tl-marker-color: #fffdf8;
+  --tl-arrow-color: #26313c;
+
+  min-height: 60px;
+
+  background-color: #d4a857;
+
+  border-radius: 4px;
+}
+
+
+.tl-sweep-button--filled:hover {
+  border-radius: 999px;
+}
+
+
+
+/* ============================================================
+   TEXT VERSION
+   Example: VIEW SERVICES
+   ============================================================ */
+
+.tl-sweep-button--text {
+  --tl-marker-size: 20px;
+
+  --tl-marker-start: 0px;
+  --tl-marker-end-gap: 0px;
+
+  --tl-padding-left: 30px;
+  --tl-padding-right: 0px;
+
+  --tl-padding-left-hover: 0px;
+  --tl-padding-right-hover: 30px;
+
+  --tl-marker-color: #d4a857;
+  --tl-arrow-color: #26313c;
+
+  min-height: 24px;
+
+  background: transparent;
+  border: 0;
+}
