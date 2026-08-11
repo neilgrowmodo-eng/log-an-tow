@@ -154,14 +154,28 @@
             "group_WieUyM"
           ]
         },
+        "spacer_H6mJ3V": {
+          "type": "spacer",
+          "name": "t:names.spacer",
+          "settings": {
+            "size": "pixel",
+            "percent_size": 100,
+            "pixel_size": 400,
+            "custom_mobile_size": true,
+            "size_mobile": "pixel",
+            "percent_size_mobile": 100,
+            "pixel_size_mobile": 120
+          },
+          "blocks": {}
+        },
         "group_q3hPng": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
             "custom_class": "",
-            "content_direction": "column",
+            "content_direction": "row",
             "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
+            "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
@@ -190,7 +204,7 @@
             "open_in_new_tab": false,
             "placeholder": "",
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 48,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -221,15 +235,104 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "group_LqWEwp": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "custom_class": "",
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-end",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "button_jz7Lrt": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "custom_class": "",
+                    "label": "REQUEST SERVICE",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "custom_button_background": "{{ settings.color_palette.foreground }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.background }}",
+                    "link_text_color": "",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                },
+                "button_Tq8GFH": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "custom_class": "",
+                    "label": "VIEW SERVICES",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button-secondary",
+                    "custom_button_background": "{{ settings.color_palette.foreground }}",
+                    "custom_button_text": "{{ settings.color_palette.background }}",
+                    "custom_button_border": "{{ settings.color_palette.background }}",
+                    "link_text_color": "",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_jz7Lrt",
+                "button_Tq8GFH"
+              ]
             }
           },
           "block_order": [
-            "text_MkfTUE"
+            "text_MkfTUE",
+            "group_LqWEwp"
           ]
         }
       },
       "block_order": [
         "group_cJg99y",
+        "spacer_H6mJ3V",
         "group_q3hPng"
       ],
       "name": "t:names.custom_section",
@@ -661,6 +764,7 @@
                       "type": "image",
                       "name": "t:names.image",
                       "settings": {
+                        "custom_class": "mr-n30p",
                         "image": "shopify://shop_images/filtered-image.webp",
                         "link": "",
                         "image_ratio": "adapt",
@@ -878,7 +982,7 @@
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
-                        "custom_class": "tl-sweep-button tl-sweep-button_color-1",
+                        "custom_class": "",
                         "label": "REQUEST SERVICE",
                         "link": "shopify://collections/all",
                         "open_in_new_tab": false,
@@ -1031,7 +1135,7 @@
             "open_in_new_tab": false,
             "placeholder": "",
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 20,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -1257,17 +1361,244 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "custom_liquid_BHARfA": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
+            "group_PP3pYX": {
+              "type": "group",
+              "name": "t:names.group",
               "settings": {
-                "custom_liquid": ""
+                "custom_class": "",
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "space-between",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 20,
+                "padding-block-end": 20,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "tl_service_card_DF7fnU": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "01",
+                    "card_icon": "shopify://shop_images/Marine_Towing.png",
+                    "card_title": "Marine Towing",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "Dependable towing support for vessels in need of assistance across local waterways.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_8bVCTF": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "02",
+                    "card_icon": "shopify://shop_images/Log_Salvage_and_Recovery.png",
+                    "card_title": "Log Towing and Relocation",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "Safe, efficient travel of logs and timber materials to their destination.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_crfzHQ": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "03",
+                    "card_icon": "shopify://shop_images/Log_Towing_and_Relocation.png",
+                    "card_title": "Log Salvage and Recovery",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "Recovery of loose or displaced logs from the water, minimizing loss and hazard.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_XFYQgr": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "04",
+                    "card_icon": "shopify://shop_images/Vessel_Assistance.png",
+                    "card_title": "Vessel Assistance",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "On-water support for vessel experiencing mechanical trouble or requiring a tow to safety",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tl_service_card_DF7fnU",
+                "tl_service_card_8bVCTF",
+                "tl_service_card_crfzHQ",
+                "tl_service_card_XFYQgr"
+              ]
+            },
+            "group_etntmR": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "custom_class": "",
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "space-between",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 20,
+                "padding-block-end": 20,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "tl_service_card_Pb6HJ3": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "05",
+                    "card_icon": "shopify://shop_images/Marina_and_Dock_Support.png",
+                    "card_title": "Marina and Dock Support",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "Practical assistance for marina operations and dock-related work.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_ccP9r7": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "06",
+                    "card_icon": "shopify://shop_images/Debris_Removal.png",
+                    "card_title": "Debris Removal",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "Clearing waterway debris to keeep channels safe and accessible.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_rwid43": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "07",
+                    "card_icon": "shopify://shop_images/Equipment_and_Material_Transport.png",
+                    "card_title": "Equipment and Material Transport",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "Reliable water transport for equipment and materials to hard to reach sites.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_6nByjB": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "08",
+                    "card_icon": "shopify://shop_images/Group_1.png",
+                    "card_title": "Custom Marine Work",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "OVERVIEW",
+                    "card_content": "Additional marine services tailored to project special needs. Contact us to discuss your requirements",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "tl_service_card_Pb6HJ3",
+                "tl_service_card_ccP9r7",
+                "tl_service_card_rwid43",
+                "tl_service_card_6nByjB"
+              ]
             }
           },
           "block_order": [
-            "custom_liquid_BHARfA"
+            "group_PP3pYX",
+            "group_etntmR"
           ]
         }
       },
@@ -1302,8 +1633,257 @@
         "border_opacity": 100,
         "border_color": "",
         "border_radius": 0,
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    },
+    "section_X7xF7Q": {
+      "type": "section",
+      "blocks": {
+        "group_agG3cc": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "custom_class": "",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_MGtard": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "custom_class": "fs-40 fw-400 ls-n2 lh-11p",
+                "text": "<h3>Marine Services Built for<br/>the Water You Work On</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "{{ settings.color_palette.color1 }}",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_8MEpUC": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "custom_class": "fs-18 fw-500",
+                "text": "<p>Log an' Tow operates across the Fraser River and surrounding waterways. Coverage can vary by project and conditions, so reach out to confirm availability for your specific location.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "{{ settings.color_palette.color1 }}",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_MGtard",
+            "text_8MEpUC"
+          ]
+        }
+      },
+      "block_order": [
+        "group_agG3cc"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "custom_class": "",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    },
+    "tl_location_map_aWqJFz": {
+      "type": "tl-location-map",
+      "blocks": {
+        "tl_location_marker_yTL4hJ": {
+          "type": "tl-location-marker",
+          "name": "TL Location Marker",
+          "settings": {
+            "custom_class": "",
+            "location_name": "Richmond",
+            "font_size": 41,
+            "location_icon": "shopify://shop_images/Group_2.png",
+            "icon_size": 88,
+            "position_x": 12,
+            "position_y": 28,
+            "position_x_mobile": 50,
+            "position_y_mobile": 50,
+            "font_size_mobile": 16,
+            "icon_size_mobile": 40
+          },
+          "blocks": {}
+        },
+        "tl_location_marker_4xgatK": {
+          "type": "tl-location-marker",
+          "name": "TL Location Marker",
+          "settings": {
+            "custom_class": "",
+            "location_name": "Delta",
+            "font_size": 28,
+            "location_icon": "shopify://shop_images/Group_2.png",
+            "icon_size": 60,
+            "position_x": 33,
+            "position_y": 17,
+            "position_x_mobile": 50,
+            "position_y_mobile": 50,
+            "font_size_mobile": 16,
+            "icon_size_mobile": 40
+          },
+          "blocks": {}
+        },
+        "tl_location_marker_FyhKVL": {
+          "type": "tl-location-marker",
+          "name": "TL Location Marker",
+          "settings": {
+            "custom_class": "",
+            "location_name": "Maple Ridge",
+            "font_size": 16,
+            "location_icon": "shopify://shop_images/Group_2.png",
+            "icon_size": 40,
+            "position_x": 50,
+            "position_y": 18,
+            "position_x_mobile": 50,
+            "position_y_mobile": 50,
+            "font_size_mobile": 16,
+            "icon_size_mobile": 40
+          },
+          "blocks": {}
+        },
+        "tl_location_marker_d6GjeB": {
+          "type": "tl-location-marker",
+          "name": "TL Location Marker",
+          "settings": {
+            "custom_class": "",
+            "location_name": "Pitt Meadows",
+            "font_size": 11,
+            "location_icon": "shopify://shop_images/Group_2.png",
+            "icon_size": 28,
+            "position_x": 70,
+            "position_y": 18,
+            "position_x_mobile": 50,
+            "position_y_mobile": 50,
+            "font_size_mobile": 16,
+            "icon_size_mobile": 40
+          },
+          "blocks": {}
+        },
+        "tl_location_marker_HGR3iY": {
+          "type": "tl-location-marker",
+          "name": "TL Location Marker",
+          "settings": {
+            "custom_class": "",
+            "location_name": "New Wesminister",
+            "font_size": 19,
+            "location_icon": "shopify://shop_images/Group_2.png",
+            "icon_size": 38,
+            "position_x": 87,
+            "position_y": 24,
+            "position_x_mobile": 50,
+            "position_y_mobile": 50,
+            "font_size_mobile": 16,
+            "icon_size_mobile": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tl_location_marker_yTL4hJ",
+        "tl_location_marker_4xgatK",
+        "tl_location_marker_FyhKVL",
+        "tl_location_marker_d6GjeB",
+        "tl_location_marker_HGR3iY"
+      ],
+      "name": "TL Location Map",
+      "settings": {
+        "background_image": "shopify://shop_images/5cf6c64eeacfa20519323f22bbb8e00d3e660ac1.png",
+        "logo_width": 180,
+        "logo_width_mobile": 120,
+        "height_desktop": 620,
+        "height_mobile": 600
       }
     },
     "section_aJPbRi": {
@@ -1344,7 +1924,7 @@
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
-            "padding-block-start": 0,
+            "padding-block-start": 80,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
@@ -2228,7 +2808,7 @@
         "border_opacity": 100,
         "border_color": "",
         "border_radius": 0,
-        "padding-block-start": 40,
+        "padding-block-start": 0,
         "padding-block-end": 40
       }
     }
@@ -2238,6 +2818,8 @@
     "section_EechWc",
     "section_mBiQbj",
     "section_gM8Jfk",
+    "section_X7xF7Q",
+    "tl_location_map_aWqJFz",
     "section_aJPbRi"
   ]
 }

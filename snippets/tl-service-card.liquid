@@ -1,0 +1,106 @@
+{%- doc -%}
+  Renders a TL service card with a front state and hover reveal state.
+
+  @param {object} block - Shopify theme block
+
+  @example
+    {% render 'tl-service-card', block: block %}
+{%- enddoc -%}
+
+{%- liquid
+  assign block_settings = block.settings
+
+  assign card_number = block_settings.card_number
+  assign card_icon = block_settings.card_icon
+  assign card_title = block_settings.card_title
+
+  assign overview_label = block_settings.overview_label
+  assign card_content = block_settings.card_content
+
+  assign custom_class = block_settings.custom_class
+
+  assign icon_alt = card_icon.alt | default: card_title
+-%}
+
+<div
+  class="tl-service-card{% if custom_class != blank %} {{ custom_class }}{% endif %}"
+  style="
+    --tl-first-text: {{ block_settings.first_text_color }};
+    --tl-first-background: {{ block_settings.first_background_color }};
+    --tl-second-text: {{ block_settings.second_text_color }};
+    --tl-second-background: {{ block_settings.second_background_color }};
+  "
+  {{ block.shopify_attributes }}
+>
+  <div class="tl-service-card__overlay"></div>
+  <div class="tl-service-card__layer tl-service-card__front">
+
+    <div class="tl-service-card__top">
+      {%- if card_number != blank -%}
+        <span class="tl-service-card__number">
+          {{ card_number | escape }}
+        </span>
+      {%- endif -%}
+
+      <span
+        class="tl-service-card__indicator"
+        aria-hidden="true"
+      ></span>
+    </div>
+
+    <div class="tl-service-card__front-content">
+
+      {%- if card_icon != blank -%}
+        {{
+          card_icon
+          | image_url: width: 400
+          | image_tag:
+            class: 'tl-service-card__icon',
+            widths: '100, 200, 300, 400',
+            sizes: '120px',
+            loading: 'lazy',
+            alt: icon_alt
+        }}
+      {%- endif -%}
+
+      {%- if card_title != blank -%}
+        <h3 class="tl-service-card__title">
+          {{ card_title | newline_to_br }}
+        </h3>
+      {%- endif -%}
+
+    </div>
+  </div>
+
+  <div class="tl-service-card__layer tl-service-card__back">
+
+    <div class="tl-service-card__top">
+      {%- if card_number != blank -%}
+        <span class="tl-service-card__number">
+          {{ card_number | escape }}
+        </span>
+      {%- endif -%}
+
+      <span
+        class="tl-service-card__indicator"
+        aria-hidden="true"
+      ></span>
+    </div>
+
+    <div class="tl-service-card__back-content">
+
+      {%- if overview_label != blank -%}
+        <div class="tl-service-card__overview">
+          {{ overview_label | escape }}
+        </div>
+      {%- endif -%}
+
+      {%- if card_content != blank -%}
+        <p class="tl-service-card__description">
+          {{ card_content | newline_to_br }}
+        </p>
+      {%- endif -%}
+
+    </div>
+  </div>
+</div>

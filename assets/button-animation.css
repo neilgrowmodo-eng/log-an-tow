@@ -64,17 +64,19 @@
   --tl-marker-start: 5px;
   --tl-marker-end-gap: 5px;
 
-  --tl-padding-left: 28px;
-  --tl-padding-right: 28px;
+  --tl-padding-left: 40px;
+  --tl-padding-right: 40px;
 
-  --tl-padding-left-hover: 28px;
-  --tl-padding-right-hover: 28px;
+  --tl-padding-left-hover: 50px;
+  --tl-padding-right-hover: 50px;
 
   position: relative;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 200px;
+  white-space: nowrap;
 
   padding-left: var(--tl-padding-left);
   padding-right: var(--tl-padding-right);
@@ -95,7 +97,10 @@
 
 .tl-sweep-button_color-2 {
     --tl-marker-color: #D4A857;
-    --tl-arrow-color: #F6F1E7;
+    --tl-arrow-color: #26313c;
+    --button-border-width: none;
+    color: white;
+    --button-background-color: none !important;
 }
 
 
@@ -181,6 +186,7 @@
 .tl-sweep-button:hover {
   padding-left: var(--tl-padding-left-hover);
   padding-right: var(--tl-padding-right-hover);
+  border-radius: 30px;
 }
 
 

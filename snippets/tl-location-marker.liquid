@@ -1,0 +1,56 @@
+{%- doc -%}
+  Renders an absolutely positioned location marker.
+
+  @param {object} block - Shopify theme block
+
+  @example
+    {% render 'tl-location-marker', block: block %}
+{%- enddoc -%}
+
+{%- liquid
+  assign block_settings = block.settings
+  assign location_icon = block_settings.location_icon
+
+  assign marker_class = 'tl-location-marker'
+
+  if block_settings.custom_class != blank
+    assign marker_class = marker_class | append: ' ' | append: block_settings.custom_class
+  endif
+-%}
+
+<div
+  class="{{ marker_class }}"
+  style="
+    --tl-marker-x: {{ block_settings.position_x }}%;
+    --tl-marker-y: {{ block_settings.position_y }}%;
+
+    --tl-marker-x-mobile: {{ block_settings.position_x_mobile }}%;
+    --tl-marker-y-mobile: {{ block_settings.position_y_mobile }}%;
+
+    --tl-marker-font-size: {{ block_settings.font_size }}px;
+    --tl-marker-font-size-mobile: {{ block_settings.font_size_mobile }}px;
+
+    --tl-marker-icon-size: {{ block_settings.icon_size }}px;
+    --tl-marker-icon-size-mobile: {{ block_settings.icon_size_mobile }}px;
+  "
+  {{ block.shopify_attributes }}
+>
+  {%- if block_settings.location_name != blank -%}
+    <div class="tl-location-marker__name">
+      {{ block_settings.location_name | escape }}
+    </div>
+  {%- endif -%}
+
+  {%- if location_icon != blank -%}
+    {{
+      location_icon
+      | image_url: width: 400
+      | image_tag:
+        class: 'tl-location-marker__icon',
+        widths: '50, 100, 150, 200, 300, 400',
+        sizes: '150px',
+        loading: 'lazy',
+        alt: location_icon.alt
+    }}
+  {%- endif -%}
+</div>

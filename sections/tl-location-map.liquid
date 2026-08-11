@@ -1,0 +1,142 @@
+{{ 'section-tl-location-map.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign background_image = section.settings.background_image
+  assign logo = section.settings.logo
+-%}
+
+{%- style -%}
+ .section--tl-location-map {
+    background-image: url('{{ section.settings.background_image | image_url: width: 3840 }}');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+ }
+  #TlLocationMap-{{ section.id }} {
+    --tl-location-map-height-desktop: {{ section.settings.height_desktop }}px;
+    --tl-location-map-height-mobile: {{ section.settings.height_mobile }}px;
+  }
+
+  #TlLocationMap-{{ section.id }} .tl-location-map__logo {
+    width: {{ section.settings.logo_width }}px;
+  }
+
+  #TlLocationMap-{{ section.id }} .tl-location-map__logo {
+    width: {{ section.settings.logo_width }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    #TlLocationMap-{{ section.id }} .tl-location-map__logo {
+      width: {{ section.settings.logo_width_mobile }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  id="TlLocationMap-{{ section.id }}"
+  class="tl-location-map"
+>
+
+  <div class="tl-location-map__markers">
+    {% content_for 'blocks' %}
+  </div>
+
+  {%- if logo != blank -%}
+    <div class="tl-location-map__logo-wrapper">
+      {{
+        logo
+        | image_url: width: 600
+        | image_tag:
+          class: 'tl-location-map__logo',
+          widths: '150, 250, 400, 600',
+          sizes: '200px',
+          loading: 'lazy',
+          alt: logo.alt
+      }}
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "TL Location Map",
+  "tag": "section",
+  "class": "section section--tl-location-map",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "min": 50,
+      "max": 400,
+      "step": 5,
+      "unit": "px",
+      "default": 180
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "label": "Logo width - mobile",
+      "min": 50,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "default": 120
+    },
+
+    {
+      "type": "header",
+      "content": "Section height"
+    },
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "label": "Desktop height",
+      "min": 400,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "default": 620
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "Mobile height",
+      "min": 400,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "default": 600
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TL Location Map"
+    }
+  ]
+}
+{% endschema %}

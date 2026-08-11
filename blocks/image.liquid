@@ -42,6 +42,14 @@
 
 {% capture image %}
   {%- if block_settings.image -%}
+    {% liquid
+      assign image_class = 'image-block__image border-style'
+
+      if block_settings.custom_class != blank
+        assign image_class = image_class | append: ' ' | append: block_settings.custom_class
+      endif
+    %}
+
     {{
       block_settings.image
       | image_url: width: 3840
@@ -49,7 +57,7 @@
         width: block_settings.image.width,
         widths: widths,
         height: block_settings.image.height,
-        class: 'image-block__image border-style',
+        class: image_class,
         style: image_border_style,
         sizes: sizes
     }}
@@ -117,6 +125,12 @@
   "name": "t:names.image",
   "tag": null,
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class",
+      "info": "Enter a custom CSS class for this block"
+    },
     {
       "type": "image_picker",
       "id": "image",
