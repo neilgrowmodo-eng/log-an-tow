@@ -41,6 +41,9 @@
   "
   {{ shopify_attributes }}
   data-testid="group-block"
+  {% if settings.aos_animation != blank and settings.aos_animation != 'none' %}
+    data-aos="{{ settings.aos_animation }}"
+  {% endif %}
 >
   {%- if settings.link != blank -%}
     <a

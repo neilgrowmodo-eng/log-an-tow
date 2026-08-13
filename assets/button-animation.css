@@ -61,14 +61,22 @@
   );
 
   --tl-marker-size: 20px;
-  --tl-marker-start: 5px;
-  --tl-marker-end-gap: 5px;
+  --tl-marker-start: 10px;
+  --tl-marker-end-gap: 25px;
 
   --tl-padding-left: 40px;
   --tl-padding-right: 40px;
 
-  --tl-padding-left-hover: 50px;
-  --tl-padding-right-hover: 50px;
+  --tl-padding-left-hover: 10px;
+  --tl-padding-right-hover: 40px;
+
+
+  
+  --tl-padding-left_mobile: 30px;
+  --tl-padding-right_mobile: 10px;
+
+  --tl-padding-left-hover_mobile: 10px;
+  --tl-padding-right-hover_mobile: 30px;
 
   position: relative;
 
@@ -101,6 +109,20 @@
     --button-border-width: none;
     color: white;
     --button-background-color: none !important;
+}
+
+.tl-sweep-button_color-3 {
+    --tl-marker-color: #D4A857;
+    --tl-arrow-color: #26313c;
+    --button-border-width: none;
+    color: #26313c;
+    --button-background-color: none !important;
+}
+
+.header-call-button {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 
@@ -278,4 +300,30 @@
 
   background: transparent;
   border: 0;
+}
+
+.w-250 {width: 250px;}
+.header-actions--text {
+  height: 100%;
+}
+.header a.tl-sweep-button {
+  transition: padding 0.5s
+}
+
+
+@media screen and (max-width: 749px) {
+ 
+
+  .w-250 {width: 100%;}
+
+  .header-call-button .tl-sweep-button {
+    padding-left: var(--tl-padding-left_mobile);
+    padding-right: var(--tl-padding-right_mobile)
+  }
+
+  /* Hover styling */
+  .header-call-button .tl-sweep-button:hover {
+    padding-left: var(--tl-padding-left-hover_mobile);
+    padding-right: var(--tl-padding-right-hover_mobile)
+  }
 }

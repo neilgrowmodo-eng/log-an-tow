@@ -1,0 +1,436 @@
+{{ 'section-tl-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #TlMarineWork-{{ section.id }} {
+    --tl-marine-bg: {{ section.settings.background_color }};
+    --tl-marine-text: {{ section.settings.text_color }};
+  }
+
+	.section--tl-marine-work-slider {
+		background-color: {{ section.settings.background_color }};
+	}
+{%- endstyle -%}
+
+<section
+  id="TlMarineWork-{{ section.id }}"
+  class="tl-marine-work"
+>
+  <div class="tl-marine-work__inner">
+
+    {%- comment -%}
+      LEFT CONTENT
+    {%- endcomment -%}
+
+    <div class="tl-marine-work__content">
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="tl-marine-work__subheading">
+          {{ section.settings.subheading | escape }}
+        </p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h3 class="tl-marine-work__heading">
+          {{ section.settings.heading | escape | newline_to_br }}
+        </h3>
+      {%- endif -%}
+
+      {%- if section.settings.body != blank -%}
+        <p class="tl-marine-work__body">
+          {{ section.settings.body | escape | newline_to_br }}
+        </p>
+      {%- endif -%}
+
+    </div>
+
+
+    {%- comment -%}
+      RIGHT CAROUSEL
+    {%- endcomment -%}
+
+    <div class="tl-marine-work__slider-column">
+
+      <section
+        id="TlMarineSlider-{{ section.id }}"
+        class="splide tl-marine-work-slider"
+        aria-label="{{ section.settings.heading | default: 'Marine work gallery' | escape }}"
+        data-tl-marine-slider
+      >
+
+        <div class="splide__track tl-marine-work-slider__track">
+
+          <ul class="splide__list">
+
+            {%- for block in section.blocks -%}
+
+              {%- case block.type -%}
+
+
+                {%- comment -%}
+                  REGULAR IMAGE SLIDE
+                {%- endcomment -%}
+
+                {%- when 'image' -%}
+
+                  <li
+                    class="splide__slide tl-marine-work-slider__slide"
+                    {{ block.shopify_attributes }}
+                  >
+
+                    <div class="tl-marine-work-slider__media">
+
+                      {%- if block.settings.image != blank -%}
+
+                        {{
+                          block.settings.image
+                          | image_url: width: 2400
+                          | image_tag:
+                            class: 'tl-marine-work-slider__image',
+                            widths: '600, 900, 1200, 1600, 2000, 2400',
+                            sizes: '(max-width: 767px) 90vw, (max-width: 1024px) 70vw, 65vw',
+                            loading: 'lazy',
+                            alt: block.settings.image.alt
+                        }}
+
+                      {%- else -%}
+
+                        {{
+                          'image'
+                          | placeholder_svg_tag:
+                            'tl-marine-work-slider__placeholder'
+                        }}
+
+                      {%- endif -%}
+
+                    </div>
+
+                  </li>
+
+
+                {%- comment -%}
+                  BEFORE / AFTER SLIDE
+                {%- endcomment -%}
+
+                {%- when 'before_after' -%}
+
+                  <li
+                    class="splide__slide tl-marine-work-slider__slide"
+                    {{ block.shopify_attributes }}
+                  >
+
+                    <div
+                      class="tl-before-after"
+                      data-tl-before-after
+                      style="--tl-comparison-position: 50%;"
+                    >
+
+                      {%- comment -%}
+                        BEFORE IMAGE
+                      {%- endcomment -%}
+
+                      <div class="tl-before-after__before">
+
+                        {%- if block.settings.before_image != blank -%}
+
+                          {{
+                            block.settings.before_image
+                            | image_url: width: 2400
+                            | image_tag:
+                              class: 'tl-before-after__image',
+                              widths: '600, 900, 1200, 1600, 2000, 2400',
+                              sizes: '(max-width: 767px) 90vw, (max-width: 1024px) 70vw, 65vw',
+                              loading: 'lazy',
+                              alt: block.settings.before_image.alt
+                          }}
+
+                        {%- else -%}
+
+                          {{
+                            'image'
+                            | placeholder_svg_tag:
+                              'tl-before-after__placeholder'
+                          }}
+
+                        {%- endif -%}
+
+                      </div>
+
+
+                      {%- comment -%}
+                        AFTER IMAGE
+                      {%- endcomment -%}
+
+                      <div class="tl-before-after__after">
+
+                        {%- if block.settings.after_image != blank -%}
+
+                          {{
+                            block.settings.after_image
+                            | image_url: width: 2400
+                            | image_tag:
+                              class: 'tl-before-after__image',
+                              widths: '600, 900, 1200, 1600, 2000, 2400',
+                              sizes: '(max-width: 767px) 90vw, (max-width: 1024px) 70vw, 65vw',
+                              loading: 'lazy',
+                              alt: block.settings.after_image.alt
+                          }}
+
+                        {%- else -%}
+
+                          {{
+                            'image'
+                            | placeholder_svg_tag:
+                              'tl-before-after__placeholder'
+                          }}
+
+                        {%- endif -%}
+
+                      </div>
+
+
+                      {%- comment -%}
+                        DIVIDER
+                      {%- endcomment -%}
+
+                      <div
+                        class="tl-before-after__divider"
+                        aria-hidden="true"
+                      >
+                        <span class="tl-before-after__handle">
+
+                          <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M9 8L5 12L9 16"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+
+                            <path
+                              d="M15 8L19 12L15 16"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+
+                        </span>
+                      </div>
+
+
+                      {%- comment -%}
+                        ACCESSIBLE DRAG RANGE
+                      {%- endcomment -%}
+
+                      <input
+                        class="tl-before-after__range"
+                        data-tl-before-after-range
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="50"
+                        aria-label="Adjust image comparison"
+                      >
+
+                    </div>
+
+                  </li>
+
+              {%- endcase -%}
+
+            {%- endfor -%}
+
+          </ul>
+
+        </div>
+
+
+        {%- comment -%}
+          CUSTOM CONTROLS
+        {%- endcomment -%}
+
+        <div class="tl-marine-work-slider__controls">
+
+          <ul
+            class="splide__pagination tl-marine-work-slider__pagination"
+          ></ul>
+
+
+          <div
+            class="splide__arrows tl-marine-work-slider__arrows"
+          >
+
+            <button
+              class="splide__arrow splide__arrow--prev tl-marine-work-slider__arrow"
+              type="button"
+              aria-label="Previous slide"
+            >
+              <svg
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.5 9L11.5 16L18.5 23"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="M12 16H22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+
+
+            <button
+              class="splide__arrow splide__arrow--next tl-marine-work-slider__arrow"
+              type="button"
+              aria-label="Next slide"
+            >
+              <svg
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+              >
+                <path
+                  d="M13.5 9L20.5 16L13.5 23"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="M20 16H10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "TL Marine Work Slider",
+  "tag": "section",
+  "class": "section section--tl-marine-work-slider",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "WHAT WE DO"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Marine Work on\nthe Fraser River"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body text",
+      "default": "A look at the equipment, conditions, and jobs we handle across the Lower Mainland's waterways."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#F6F1E7"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#32373E"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "before_after",
+      "name": "Before / After",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "before_image",
+          "label": "Before image"
+        },
+        {
+          "type": "image_picker",
+          "id": "after_image",
+          "label": "After image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TL Marine Work Slider",
+      "blocks": [
+        {
+          "type": "before_after"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

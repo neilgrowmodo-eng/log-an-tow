@@ -78,6 +78,9 @@
   "
 
   {{ block.shopify_attributes }}
+  {% if block_settings.aos_animation != blank and block_settings.aos_animation != 'none' %}
+    data-aos="{{ block_settings.aos_animation }}"
+  {% endif %}
 {% endcapture %}
 
 {% liquid

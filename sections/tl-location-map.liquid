@@ -7,11 +7,31 @@
 
 {%- style -%}
  .section--tl-location-map {
-    background-image: url('{{ section.settings.background_image | image_url: width: 3840 }}');
+    background-image: 
+      linear-gradient(
+        to bottom,
+        #EEEAE0 0%,
+        #EEEAE0 1%,
+        rgba(238, 234, 224, 0.92) 3%,
+        rgba(238, 234, 224, 0.7) 8%,
+        rgba(238, 234, 224, 0.35) 13%,
+        rgba(238, 234, 224, 0) 26%
+      ),
+      url('{{ section.settings.background_image | image_url: width: 3840 }}');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    height: {{section.settings.height_desktop}}px;
+
+    
  }
+
+ @media screen and (max-width: 749px) {
+    .section--tl-location-map {
+      height: {{section.settings.height_mobile}}px;
+    }
+  }
+
   #TlLocationMap-{{ section.id }} {
     --tl-location-map-height-desktop: {{ section.settings.height_desktop }}px;
     --tl-location-map-height-mobile: {{ section.settings.height_mobile }}px;
@@ -30,6 +50,11 @@
       width: {{ section.settings.logo_width_mobile }}px;
     }
   }
+
+  @media screen and (max-width: 1740px) {.section--tl-location-map {background-position: center 54%;}}
+  @media screen and (max-width: 1602px) {.section--tl-location-map {background-position: center 60%;}}
+  @media screen and (max-width: 1458px) {.section--tl-location-map {background-position: center 70%;}}
+  @media screen and (max-width: 1328px) {.section--tl-location-map {background-position: center 90%;}}
 {%- endstyle -%}
 
 <section
@@ -47,7 +72,7 @@
         logo
         | image_url: width: 600
         | image_tag:
-          class: 'tl-location-map__logo',
+          class: 'tl-location-map__logo tl-rotating-logo',
           widths: '150, 250, 400, 600',
           sizes: '200px',
           loading: 'lazy',
@@ -61,7 +86,7 @@
 {
   "name": "TL Location Map",
   "tag": "section",
-  "class": "section section--tl-location-map",
+  "class": "section section--tl-location-map section-grain-overlay",
   "settings": [
     {
       "type": "header",
@@ -72,7 +97,6 @@
       "id": "background_image",
       "label": "Background image"
     },
-
     {
       "type": "header",
       "content": "Logo"

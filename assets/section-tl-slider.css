@@ -1,0 +1,570 @@
+/* ============================================================
+   TL MARINE WORK SLIDER
+   ============================================================ */
+
+.tl-marine-work {
+  width: 100%;
+
+  padding-block: 80px 24px;
+
+  overflow: hidden;
+
+  color: var(--tl-marine-text);
+  background-color: var(--tl-marine-bg);
+}
+
+
+.tl-marine-work__inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, 330px)
+    minmax(0, 1fr);
+
+  gap: 36px;
+
+  width: 100%;
+
+}
+
+
+/* ============================================================
+   LEFT CONTENT
+   ============================================================ */
+
+.tl-marine-work__content {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  padding-right: 36px;
+
+  border-right: 1px solid rgb(50 55 62 / 35%);
+}
+
+
+.tl-marine-work__subheading {
+  position: relative;
+
+  margin: 36px 0 0;
+
+  padding-left: 20px;
+
+  color: var(--tl-marine-text);
+
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  /* Figma 10% */
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+.tl-marine-work__subheading::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  width: 12px;
+  height: 12px;
+
+  transform: translateY(-50%);
+
+  background: #d9a63b;
+}
+
+
+.tl-marine-work__heading {
+  margin: 38px 0 0;
+
+  max-width: 290px;
+
+  color: var(--tl-marine-text);
+
+  font-family: "Oscan Expanded", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: 0;
+}
+
+
+.tl-marine-work__body {
+  margin: 54px 0 0;
+
+  max-width: 310px;
+
+  color: var(--tl-marine-text);
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   SLIDER COLUMN
+   ============================================================ */
+
+.tl-marine-work__slider-column {
+  min-width: 0;
+}
+
+
+.tl-marine-work-slider {
+  width: 100%;
+}
+
+
+/* ============================================================
+   SLIDER TRACK
+   ============================================================ */
+
+.tl-marine-work-slider__track {
+  width: 100%;
+}
+
+
+.tl-marine-work-slider__slide {
+  overflow: hidden;
+
+  aspect-ratio: 1.65 / 1;
+
+  border-radius: 18px;
+}
+
+
+.tl-marine-work-slider__media {
+  width: 100%;
+  height: 100%;
+}
+
+
+.tl-marine-work-slider__image,
+.tl-marine-work-slider__placeholder {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.tl-marine-work-slider__placeholder {
+  background: rgb(0 0 0 / 5%);
+}
+
+
+/* ============================================================
+   BEFORE / AFTER
+   ============================================================ */
+
+.tl-before-after {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #ddd;
+}
+
+
+.tl-before-after__before,
+.tl-before-after__after {
+  position: absolute;
+  inset: 0;
+}
+
+
+.tl-before-after__before {
+  z-index: 1;
+}
+
+
+.tl-before-after__after {
+  z-index: 2;
+
+  /*
+    Show AFTER image only to the right
+    of the comparison handle.
+  */
+  clip-path: inset(
+    0
+    0
+    0
+    var(--tl-comparison-position)
+  );
+}
+
+
+.tl-before-after__image,
+.tl-before-after__placeholder {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.tl-before-after__divider {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 0;
+  bottom: 0;
+
+  left: var(--tl-comparison-position);
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background: #f6f1e7;
+
+  pointer-events: none;
+}
+
+
+.tl-before-after__handle {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  transform: translate(-50%, -50%);
+
+  color: #32373e;
+
+  background: #f6f1e7;
+
+  border-radius: 50%;
+}
+
+
+.tl-before-after__range {
+  position: absolute;
+
+  z-index: 4;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+
+  cursor: ew-resize;
+
+  opacity: 0;
+}
+
+
+/* ============================================================
+   CONTROLS
+   ============================================================ */
+
+.tl-marine-work-slider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: 56px;
+
+  padding-right: clamp(24px, 5vw, 80px);
+}
+
+
+/* ============================================================
+   PAGINATION
+   ============================================================ */
+
+.tl-marine-work-slider .tl-marine-work-slider__pagination {
+  position: static;
+
+  display: flex;
+
+  gap: 12px;
+
+  width: auto;
+
+  margin: 0;
+  padding: 0;
+
+  transform: none;
+}
+
+
+.tl-marine-work-slider
+  .tl-marine-work-slider__pagination
+  .splide__pagination__page {
+  display: block;
+
+  width: 20px;
+  height: 7px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 99px;
+
+  background: #777;
+
+  opacity: 1;
+
+  transform: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 250ms ease,
+    width 250ms ease;
+}
+
+
+.tl-marine-work-slider
+  .tl-marine-work-slider__pagination
+  .splide__pagination__page.is-active {
+  background: #d9a63b;
+
+  transform: none;
+}
+
+
+/* ============================================================
+   ARROWS
+   ============================================================ */
+
+.tl-marine-work-slider__arrows {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.tl-marine-work-slider .tl-marine-work-slider__arrow {
+  position: static;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 34px;
+
+  padding: 0;
+
+  transform: none;
+
+  color: #32373e;
+
+  background: #d9a63b;
+
+  border: 0;
+  border-radius: 999px;
+
+  opacity: 1;
+
+  cursor: pointer;
+
+  transition:
+    opacity 250ms ease,
+    background-color 250ms ease;
+}
+
+
+.tl-marine-work-slider
+  .tl-marine-work-slider__arrow
+  svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+.tl-marine-work-slider
+  .tl-marine-work-slider__arrow:disabled {
+  background: #eadcb9;
+
+  opacity: 0.7;
+
+  cursor: default;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media screen and (max-width: 1024px) {
+
+  .tl-marine-work {
+    padding-top: 60px;
+  }
+
+
+  .tl-marine-work__inner {
+    grid-template-columns:
+      minmax(220px, 280px)
+      minmax(0, 1fr);
+
+    gap: 24px;
+
+    padding-left: 32px;
+  }
+
+
+  .tl-marine-work__content {
+    padding-right: 24px;
+  }
+
+
+  .tl-marine-work__heading {
+    margin-top: 30px;
+
+    font-size: 34px;
+  }
+
+
+  .tl-marine-work__body {
+    margin-top: 40px;
+
+    font-size: 20px;
+  }
+
+
+  .tl-marine-work-slider__slide {
+    aspect-ratio: 1.45 / 1;
+  }
+
+
+  .tl-marine-work-slider__controls {
+    margin-top: 38px;
+
+    padding-right: 32px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 767px) {
+
+  .tl-marine-work {
+    padding-block: 48px 32px;
+  }
+
+
+  .tl-marine-work__inner {
+    display: block;
+
+    padding-inline: 20px;
+  }
+
+
+  .tl-marine-work__content {
+    padding: 0 0 36px;
+
+    border-right: 0;
+    border-bottom: 1px solid rgb(50 55 62 / 25%);
+  }
+
+
+  .tl-marine-work__subheading {
+    margin-top: 0;
+
+    font-size: 14px;
+  }
+
+
+  .tl-marine-work__heading {
+    max-width: 100%;
+
+    margin-top: 26px;
+
+    font-size: 32px;
+  }
+
+
+  .tl-marine-work__body {
+    max-width: 100%;
+
+    margin-top: 30px;
+
+    font-size: 18px;
+  }
+
+
+  .tl-marine-work__slider-column {
+    margin-top: 32px;
+  }
+
+
+  .tl-marine-work-slider__slide {
+    aspect-ratio: 4 / 3;
+
+    border-radius: 14px;
+  }
+
+
+  .tl-marine-work-slider__controls {
+    margin-top: 28px;
+
+    padding-right: 0;
+  }
+
+
+  .tl-marine-work-slider
+    .tl-marine-work-slider__pagination {
+    gap: 7px;
+  }
+
+
+  .tl-marine-work-slider
+    .tl-marine-work-slider__pagination
+    .splide__pagination__page {
+    width: 14px;
+    height: 5px;
+  }
+
+
+  .tl-marine-work-slider
+    .tl-marine-work-slider__arrow {
+    width: 42px;
+    height: 32px;
+  }
+
+}

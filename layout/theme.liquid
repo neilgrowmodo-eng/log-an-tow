@@ -151,5 +151,11 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+    /* <script src="{{ 'aos.js' | asset_url }}" defer></script> */
+    <script src="{{ 'aos-init.js' | asset_url }}" defer></script>
+    <script src="{{ 'tl-one-page-nav.js' | asset_url }}" defer></script>
+    <script src="{{ 'splide.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'tl-splide.js' | asset_url }}" defer></script>
+    <script src="{{ 'tl-slider-section.js' | asset_url }}" defer></script>
   </body>
 </html>

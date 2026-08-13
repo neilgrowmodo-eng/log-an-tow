@@ -7,6 +7,12 @@
   "settings": [
     {
       "type": "text",
+      "id": "parent_class",
+      "label": "Parent Custom class",
+      "info": "Optional CSS class name without a leading period."
+    },
+    {
+      "type": "text",
       "id": "custom_class",
       "label": "Custom class",
       "info": "Optional CSS class name without a leading period."
@@ -17,10 +23,10 @@
       "content": "Location"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "location_name",
       "label": "Location name",
-      "default": "Richmond"
+      "default": "<p>Richmond</p>"
     },
     {
       "type": "range",
@@ -80,6 +86,21 @@
 
     {
       "type": "header",
+      "content": "Icon size - Smaller Desktop screens"
+    },
+    {
+      "type": "range",
+      "id": "icon_size_sd",
+      "label": "Icon size",
+      "min": 10,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+
+    {
+      "type": "header",
       "content": "Mobile position"
     },
     {
@@ -126,6 +147,42 @@
       "step": 2,
       "unit": "px",
       "default": 40
+    },
+    {
+      "type": "header",
+      "content": "AOS Animation"
+    },
+    {
+      "type": "select",
+      "id": "aos_animation",
+      "label": "Animation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fade-up",
+          "label": "Fade up"
+        },
+        {
+          "value": "fade-down",
+          "label": "Fade down"
+        },
+        {
+          "value": "fade-left",
+          "label": "Fade left"
+        },
+        {
+          "value": "fade-right",
+          "label": "Fade right"
+        },
+        {
+          "value": "zoom-in",
+          "label": "Zoom in"
+        }
+      ],
+      "default": "none"
     }
   ],
   "presets": [

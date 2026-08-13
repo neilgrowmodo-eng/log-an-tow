@@ -48,6 +48,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-start",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -89,6 +90,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
+                "aos_animation": "none",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -121,7 +123,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "custom_class": "fw-400  ls-n2 lh-1p1",
+                    "custom_class": "fw-400  ls-n2 lh-1p1 t-fs-32",
                     "text": "<h1>Trusted Marine Towing <br/>and Log Salvage on <br/>the Fraser River</h1>",
                     "width": "fit-content",
                     "max_width": "normal",
@@ -133,6 +135,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
+                    "aos_animation": "fade-up",
                     "text_color": "{{ settings.color_palette.color2 }}",
                     "background": false,
                     "background_color": "#00000026",
@@ -181,6 +184,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -225,6 +229,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "aos_animation": "fade-up",
                 "text_color": "{{ settings.color_palette.color2 }}",
                 "background": false,
                 "background_color": "#00000026",
@@ -242,13 +247,14 @@
               "settings": {
                 "custom_class": "",
                 "content_direction": "row",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-end",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "center",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
+                "aos_animation": "fade-up",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -337,6 +343,7 @@
       ],
       "name": "t:names.custom_section",
       "settings": {
+        "custom_id": "hero-section",
         "custom_class": "",
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -367,6 +374,18 @@
         "padding-block-end": 0
       }
     },
+    "custom_liquid_VRiQcw": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"splide tl-splide\" aria-label=\"Test carousel\">\n  <div class=\"splide__track\">\n    <ul class=\"splide__list\">\n      <li class=\"splide__slide\">Slide 1</li>\n      <li class=\"splide__slide\">Slide 2</li>\n      <li class=\"splide__slide\">Slide 3</li>\n    </ul>\n  </div>\n</section>\n\n<style>\n.tl-splide .splide__slide {\n  min-height: 300px;\n  padding: 40px;\n  background: #ddd;\n}\n</style>",
+        "background_color": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "section_mBiQbj": {
       "type": "section",
       "blocks": {
@@ -383,6 +402,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -415,7 +435,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "custom_class": "certified-text fs-16 lh-1p6 ls-10",
+                "custom_class": "certified-text fs-16 lh-1p6 ls-10 m-ta-center t-fs-14 m-bdr-right-0",
                 "text": "<p>CERTIFIED AND LICENSED <br/>TO OPERATE IN BC, CANADA</p>",
                 "width": "fit-content",
                 "max_width": "normal",
@@ -427,6 +447,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "aos_animation": "none",
                 "text_color": "",
                 "background": false,
                 "background_color": "#00000026",
@@ -442,7 +463,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "custom_class": "",
+                "custom_class": "cs_hide-mobile_flex",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "space-between",
@@ -451,6 +472,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
+                "aos_animation": "none",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -525,9 +547,9 @@
                   "type": "icon",
                   "name": "t:names.icon",
                   "settings": {
-                    "custom_class": "grayscale-color",
+                    "custom_class": "",
                     "icon": "price_tag",
-                    "image_upload": "shopify://shop_images/a3f1e5cf044f1d091d8cca11a83a50d7f29a4836.png",
+                    "image_upload": "shopify://shop_images/image_28_1_1.png",
                     "width": 156,
                     "link": "",
                     "open_in_new_tab": false,
@@ -557,11 +579,227 @@
                 "icon_RyWpqG",
                 "icon_GFEXTL"
               ]
+            },
+            "group_A3hH8U": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "custom_class": "cs_hide-desktop_flex",
+                "content_direction": "row",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 20,
+                "aos_animation": "none",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "group_NdE4X8": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "custom_class": "",
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "space-evenly",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "aos_animation": "none",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "custom",
+                    "custom_width_mobile": 80,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_gMEqyW": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "custom_class": "invert-color",
+                        "icon": "price_tag",
+                        "image_upload": "shopify://shop_images/a4f381c087c7af13f205e353a54e010b61bae24e_1.png",
+                        "width": 56,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "icon_color": "{{ settings.color_palette.foreground }}"
+                      },
+                      "blocks": {}
+                    },
+                    "icon_UbDqGe": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "custom_class": "grayscale-color",
+                        "icon": "price_tag",
+                        "image_upload": "shopify://shop_images/f9ba39bd8f26da58ddd2f9c5abc868b860f70a2d.png",
+                        "width": 56,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "icon_color": "{{ settings.color_palette.foreground }}"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "icon_gMEqyW",
+                    "icon_UbDqGe"
+                  ]
+                },
+                "group_dVLfwG": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "custom_class": "",
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "space-evenly",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "aos_animation": "none",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "custom",
+                    "custom_width_mobile": 80,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_Vjmijq": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "custom_class": "invert-color",
+                        "icon": "price_tag",
+                        "image_upload": "shopify://shop_images/cda780f5bbaca2b19e922a337bf8a1f1b4158ad3.png",
+                        "width": 110,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "icon_color": "{{ settings.color_palette.foreground }}"
+                      },
+                      "blocks": {}
+                    },
+                    "icon_kykTxR": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "custom_class": "grayscale-color",
+                        "icon": "price_tag",
+                        "image_upload": "shopify://shop_images/image_28_1_1.png",
+                        "width": 112,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "icon_color": "{{ settings.color_palette.foreground }}"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "icon_Vjmijq",
+                    "icon_kykTxR"
+                  ]
+                },
+                "icon_4bTpQk": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "settings": {
+                    "custom_class": "grayscale-color",
+                    "icon": "price_tag",
+                    "image_upload": "shopify://shop_images/6a15b0da564ee195c6d533a1cc95d5eaddcbeddd.png",
+                    "width": 82,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "icon_color": "{{ settings.color_palette.foreground }}"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "group_NdE4X8",
+                "group_dVLfwG",
+                "icon_4bTpQk"
+              ]
             }
           },
           "block_order": [
             "text_GdnmEE",
-            "group_9eKMb4"
+            "group_9eKMb4",
+            "group_A3hH8U"
           ]
         },
         "group_amdg3y": {
@@ -577,6 +815,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -618,6 +857,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
+                "aos_animation": "none",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -659,6 +899,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "flex-start",
                     "gap": 12,
+                    "aos_animation": "none",
                     "width": "fit-content",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -691,7 +932,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "custom_class": "fs-40 ls-n2 fw-400",
+                        "custom_class": "fs-40 ls-n2 fw-400 t-fs-24",
                         "text": "<h2>Local Waterway<br/>Experience You<br/>Can Count On</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
@@ -703,6 +944,7 @@
                         "letter_spacing": "normal",
                         "case": "none",
                         "wrap": "pretty",
+                        "aos_animation": "fade-up",
                         "text_color": "{{ settings.color_palette.color1 }}",
                         "background": false,
                         "background_color": "#00000026",
@@ -732,6 +974,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-end",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
+                    "aos_animation": "fade-up",
                     "width": "custom",
                     "custom_width": 60,
                     "width_mobile": "fill",
@@ -760,6 +1003,31 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {
+                    "image_wL9fNQ": {
+                      "type": "image",
+                      "name": "t:names.image",
+                      "settings": {
+                        "custom_class": "absolute w-200 logo-offset tl-rotating-logo opacity-08",
+                        "image": "shopify://shop_images/PNG__4.png",
+                        "link": "",
+                        "image_ratio": "square",
+                        "width": "custom",
+                        "custom_width": 8,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_color": "",
+                        "border_radius": 100,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
                     "image_jThr7R": {
                       "type": "image",
                       "name": "t:names.image",
@@ -768,7 +1036,7 @@
                         "image": "shopify://shop_images/filtered-image.webp",
                         "link": "",
                         "image_ratio": "adapt",
-                        "width": "custom",
+                        "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
                         "custom_width_mobile": 100,
@@ -787,6 +1055,7 @@
                     }
                   },
                   "block_order": [
+                    "image_wL9fNQ",
                     "image_jThr7R"
                   ]
                 }
@@ -809,6 +1078,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
+                "aos_animation": "none",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -850,6 +1120,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "flex-start",
                     "gap": 12,
+                    "aos_animation": "none",
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -894,6 +1165,7 @@
                         "letter_spacing": "normal",
                         "case": "none",
                         "wrap": "pretty",
+                        "aos_animation": "fade-up",
                         "text_color": "{{ settings.color_palette.color1 }}",
                         "background": false,
                         "background_color": "#00000026",
@@ -914,7 +1186,7 @@
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
-                    "custom_class": "",
+                    "custom_class": "pl-6p",
                     "content_direction": "column",
                     "vertical_on_mobile": true,
                     "horizontal_alignment": "flex-start",
@@ -923,6 +1195,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
+                    "aos_animation": "fade-up",
                     "width": "custom",
                     "custom_width": 60,
                     "width_mobile": "fill",
@@ -955,7 +1228,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "custom_class": "fs-24 lh-1p5",
+                        "custom_class": "fs-24 lh-1p5 t-fs-18",
                         "text": "<p>Log an' Tow is a marine service company operating throughout the Fraser River and surrounding Lower Mainland waterways. With hands-on experience navigating local conditions, our team supports residential and commercial clients who need dependable towing, salvage, and marine assistance. Every job is approached with a focus on safety, practical problem solving, and getting the work done right.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
@@ -967,6 +1240,7 @@
                         "letter_spacing": "normal",
                         "case": "none",
                         "wrap": "pretty",
+                        "aos_animation": "fade-up",
                         "text_color": "{{ settings.color_palette.color1 }}",
                         "background": false,
                         "background_color": "#00000026",
@@ -1009,54 +1283,11 @@
                 "group_ci8JBT",
                 "group_k7dztP"
               ]
-            },
-            "group_pp6f4k": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "custom_class": "",
-                "content_direction": "row",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "group_GVWDyr",
-            "group_CnV496",
-            "group_pp6f4k"
+            "group_CnV496"
           ]
         }
       },
@@ -1066,6 +1297,7 @@
       ],
       "name": "t:names.custom_section",
       "settings": {
+        "custom_id": "about-section",
         "custom_class": "section-grain-overlay",
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1103,7 +1335,7 @@
           "type": "group",
           "name": "t:names.group",
           "settings": {
-            "custom_class": "bdr-top bdr-gold",
+            "custom_class": "bdr-top bdr-light",
             "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -1112,6 +1344,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -1153,6 +1386,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
+                "aos_animation": "none",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1185,7 +1419,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "tl-small-heading ls-10",
+                    "custom_class": "tl-small-heading ls-10 fs-20",
                     "text": "<p>WHAT WE DO</p>",
                     "width": "fit-content",
                     "max_width": "normal",
@@ -1197,6 +1431,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
+                    "aos_animation": "fade-up",
                     "text_color": "",
                     "background": false,
                     "background_color": "#00000026",
@@ -1217,7 +1452,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "custom_class": "bdr-left bdr-gold pdg-left_40",
+                "custom_class": "bdr-left bdr-light pdg-left_40 m-bdr-left-0 m-pdg-left_0",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
@@ -1226,6 +1461,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 0,
+                "aos_animation": "none",
                 "width": "custom",
                 "custom_width": 70,
                 "width_mobile": "fill",
@@ -1258,7 +1494,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "fw-400 ls-n2 fs-40",
+                    "custom_class": "fw-400 ls-n2 fs-40 t-fs-32",
                     "text": "<h3>Marine Services Built for<br/>the Water You Work On</h3>",
                     "width": "fit-content",
                     "max_width": "narrow",
@@ -1270,6 +1506,7 @@
                     "letter_spacing": "tight",
                     "case": "none",
                     "wrap": "pretty",
+                    "aos_animation": "fade-up",
                     "text_color": "",
                     "background": false,
                     "background_color": "#00000026",
@@ -1297,6 +1534,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
+                    "aos_animation": "fade-up",
                     "text_color": "",
                     "background": false,
                     "background_color": "#00000026",
@@ -1333,6 +1571,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -1365,7 +1604,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "custom_class": "",
+                "custom_class": "tl-custom-grid",
                 "content_direction": "row",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "space-between",
@@ -1374,6 +1613,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
+                "aos_animation": "fade-up",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1407,12 +1647,12 @@
                   "name": "Service Card",
                   "settings": {
                     "custom_class": "",
-                    "card_number": "01",
+                    "card_number": "",
                     "card_icon": "shopify://shop_images/Marine_Towing.png",
                     "card_title": "Marine Towing",
                     "first_text_color": "#0f5132",
                     "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
+                    "overview_label": "",
                     "card_content": "Dependable towing support for vessels in need of assistance across local waterways.",
                     "second_text_color": "#ffffff",
                     "second_background_color": "#145c3d"
@@ -1424,12 +1664,12 @@
                   "name": "Service Card",
                   "settings": {
                     "custom_class": "",
-                    "card_number": "02",
+                    "card_number": "",
                     "card_icon": "shopify://shop_images/Log_Salvage_and_Recovery.png",
                     "card_title": "Log Towing and Relocation",
                     "first_text_color": "#0f5132",
                     "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
+                    "overview_label": "",
                     "card_content": "Safe, efficient travel of logs and timber materials to their destination.",
                     "second_text_color": "#ffffff",
                     "second_background_color": "#145c3d"
@@ -1441,12 +1681,12 @@
                   "name": "Service Card",
                   "settings": {
                     "custom_class": "",
-                    "card_number": "03",
+                    "card_number": "",
                     "card_icon": "shopify://shop_images/Log_Towing_and_Relocation.png",
                     "card_title": "Log Salvage and Recovery",
                     "first_text_color": "#0f5132",
                     "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
+                    "overview_label": "",
                     "card_content": "Recovery of loose or displaced logs from the water, minimizing loss and hazard.",
                     "second_text_color": "#ffffff",
                     "second_background_color": "#145c3d"
@@ -1458,13 +1698,81 @@
                   "name": "Service Card",
                   "settings": {
                     "custom_class": "",
-                    "card_number": "04",
+                    "card_number": "",
                     "card_icon": "shopify://shop_images/Vessel_Assistance.png",
                     "card_title": "Vessel Assistance",
                     "first_text_color": "#0f5132",
                     "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
+                    "overview_label": "",
                     "card_content": "On-water support for vessel experiencing mechanical trouble or requiring a tow to safety",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_eJrdyb": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "",
+                    "card_icon": "shopify://shop_images/Marina_and_Dock_Support.png",
+                    "card_title": "Marina and Dock Support",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "",
+                    "card_content": "Practical assistance for marina operations and dock-related work.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_YpgNeW": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "",
+                    "card_icon": "shopify://shop_images/Debris_Removal.png",
+                    "card_title": "Debris Removal",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "",
+                    "card_content": "Clearing waterway debris to keeep channels safe and accessible.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_C3wEMT": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "",
+                    "card_icon": "shopify://shop_images/Equipment_and_Material_Transport.png",
+                    "card_title": "Equipment and Material Transport",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "",
+                    "card_content": "Reliable water transport for equipment and materials to hard to reach sites.",
+                    "second_text_color": "#ffffff",
+                    "second_background_color": "#145c3d"
+                  },
+                  "blocks": {}
+                },
+                "tl_service_card_EzXtqR": {
+                  "type": "tl-service-card",
+                  "name": "Service Card",
+                  "settings": {
+                    "custom_class": "",
+                    "card_number": "",
+                    "card_icon": "shopify://shop_images/Group_1.png",
+                    "card_title": "Custom Marine Work",
+                    "first_text_color": "#0f5132",
+                    "first_background_color": "#f4f0e6",
+                    "overview_label": "",
+                    "card_content": "Additional marine services tailored to project special needs. Contact us to discuss your requirements",
                     "second_text_color": "#ffffff",
                     "second_background_color": "#145c3d"
                   },
@@ -1475,130 +1783,16 @@
                 "tl_service_card_DF7fnU",
                 "tl_service_card_8bVCTF",
                 "tl_service_card_crfzHQ",
-                "tl_service_card_XFYQgr"
-              ]
-            },
-            "group_etntmR": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "custom_class": "",
-                "content_direction": "row",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "space-between",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 20,
-                "padding-block-end": 20,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "tl_service_card_Pb6HJ3": {
-                  "type": "tl-service-card",
-                  "name": "Service Card",
-                  "settings": {
-                    "custom_class": "",
-                    "card_number": "05",
-                    "card_icon": "shopify://shop_images/Marina_and_Dock_Support.png",
-                    "card_title": "Marina and Dock Support",
-                    "first_text_color": "#0f5132",
-                    "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
-                    "card_content": "Practical assistance for marina operations and dock-related work.",
-                    "second_text_color": "#ffffff",
-                    "second_background_color": "#145c3d"
-                  },
-                  "blocks": {}
-                },
-                "tl_service_card_ccP9r7": {
-                  "type": "tl-service-card",
-                  "name": "Service Card",
-                  "settings": {
-                    "custom_class": "",
-                    "card_number": "06",
-                    "card_icon": "shopify://shop_images/Debris_Removal.png",
-                    "card_title": "Debris Removal",
-                    "first_text_color": "#0f5132",
-                    "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
-                    "card_content": "Clearing waterway debris to keeep channels safe and accessible.",
-                    "second_text_color": "#ffffff",
-                    "second_background_color": "#145c3d"
-                  },
-                  "blocks": {}
-                },
-                "tl_service_card_rwid43": {
-                  "type": "tl-service-card",
-                  "name": "Service Card",
-                  "settings": {
-                    "custom_class": "",
-                    "card_number": "07",
-                    "card_icon": "shopify://shop_images/Equipment_and_Material_Transport.png",
-                    "card_title": "Equipment and Material Transport",
-                    "first_text_color": "#0f5132",
-                    "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
-                    "card_content": "Reliable water transport for equipment and materials to hard to reach sites.",
-                    "second_text_color": "#ffffff",
-                    "second_background_color": "#145c3d"
-                  },
-                  "blocks": {}
-                },
-                "tl_service_card_6nByjB": {
-                  "type": "tl-service-card",
-                  "name": "Service Card",
-                  "settings": {
-                    "custom_class": "",
-                    "card_number": "08",
-                    "card_icon": "shopify://shop_images/Group_1.png",
-                    "card_title": "Custom Marine Work",
-                    "first_text_color": "#0f5132",
-                    "first_background_color": "#f4f0e6",
-                    "overview_label": "OVERVIEW",
-                    "card_content": "Additional marine services tailored to project special needs. Contact us to discuss your requirements",
-                    "second_text_color": "#ffffff",
-                    "second_background_color": "#145c3d"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "tl_service_card_Pb6HJ3",
-                "tl_service_card_ccP9r7",
-                "tl_service_card_rwid43",
-                "tl_service_card_6nByjB"
+                "tl_service_card_XFYQgr",
+                "tl_service_card_eJrdyb",
+                "tl_service_card_YpgNeW",
+                "tl_service_card_C3wEMT",
+                "tl_service_card_EzXtqR"
               ]
             }
           },
           "block_order": [
-            "group_PP3pYX",
-            "group_etntmR"
+            "group_PP3pYX"
           ]
         }
       },
@@ -1608,6 +1802,7 @@
       ],
       "name": "t:names.custom_section",
       "settings": {
+        "custom_id": "services-section",
         "custom_class": "section-grain-overlay",
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1637,6 +1832,64 @@
         "padding-block-end": 80
       }
     },
+    "tl_slider_section_aptTL7": {
+      "type": "tl-slider-section",
+      "blocks": {
+        "before_after_9pki8i": {
+          "type": "before_after",
+          "settings": {
+            "before_image": "shopify://shop_images/before.png",
+            "after_image": "shopify://shop_images/after.png"
+          }
+        },
+        "image_bPwDYM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image.png"
+          }
+        },
+        "image_hdTiyf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_1.png"
+          }
+        },
+        "image_Xi6mhK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_2.png"
+          }
+        },
+        "image_ahGUxG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_3.png"
+          }
+        },
+        "image_7rHjgC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "before_after_9pki8i",
+        "image_bPwDYM",
+        "image_hdTiyf",
+        "image_Xi6mhK",
+        "image_ahGUxG",
+        "image_7rHjgC"
+      ],
+      "name": "TL Marine Work Slider",
+      "settings": {
+        "subheading": "WHAT WE DO",
+        "heading": "Marine Work on\nthe Fraser River",
+        "body": "A look at the equipment, conditions, and jobs we handle across the Lower Mainland's waterways.",
+        "background_color": "{{ settings.color_palette.color2 }}",
+        "text_color": "#32373e"
+      }
+    },
     "section_X7xF7Q": {
       "type": "section",
       "blocks": {
@@ -1653,6 +1906,7 @@
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "flex-end",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -1685,7 +1939,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "custom_class": "fs-40 fw-400 ls-n2 lh-11p",
+                "custom_class": "fs-40 fw-400 ls-n2 lh-11p t-fs-24",
                 "text": "<h3>Marine Services Built for<br/>the Water You Work On</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
@@ -1697,6 +1951,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "aos_animation": "fade-up",
                 "text_color": "{{ settings.color_palette.color1 }}",
                 "background": false,
                 "background_color": "#00000026",
@@ -1712,7 +1967,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "custom_class": "fs-18 fw-500",
+                "custom_class": "fs-18 fw-500 t-fs-14",
                 "text": "<p>Log an' Tow operates across the Fraser River and surrounding waterways. Coverage can vary by project and conditions, so reach out to confirm availability for your specific location.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
@@ -1724,6 +1979,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "aos_animation": "fade-up",
                 "text_color": "{{ settings.color_palette.color1 }}",
                 "background": false,
                 "background_color": "#00000026",
@@ -1747,7 +2003,8 @@
       ],
       "name": "t:names.custom_section",
       "settings": {
-        "custom_class": "",
+        "custom_id": "",
+        "custom_class": "section-grain-overlay",
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -1760,7 +2017,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "",
+        "background_color": "{{ settings.color_palette.color2 }}",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -1783,17 +2040,20 @@
           "type": "tl-location-marker",
           "name": "TL Location Marker",
           "settings": {
-            "custom_class": "",
-            "location_name": "Richmond",
+            "parent_class": "t-tl-marker_offset-18-y",
+            "custom_class": "fs-m15",
+            "location_name": "<p>Richmond</p>",
             "font_size": 41,
             "location_icon": "shopify://shop_images/Group_2.png",
             "icon_size": 88,
             "position_x": 12,
-            "position_y": 28,
-            "position_x_mobile": 50,
-            "position_y_mobile": 50,
-            "font_size_mobile": 16,
-            "icon_size_mobile": 40
+            "position_y": 26,
+            "icon_size_sd": 54,
+            "position_x_mobile": 15,
+            "position_y_mobile": 42,
+            "font_size_mobile": 14,
+            "icon_size_mobile": 20,
+            "aos_animation": "fade-up"
           },
           "blocks": {}
         },
@@ -1801,17 +2061,20 @@
           "type": "tl-location-marker",
           "name": "TL Location Marker",
           "settings": {
-            "custom_class": "",
-            "location_name": "Delta",
+            "parent_class": "t-tl-marker_offset-12-y",
+            "custom_class": "fs-m5",
+            "location_name": "<p>Delta</p>",
             "font_size": 28,
             "location_icon": "shopify://shop_images/Group_2.png",
             "icon_size": 60,
             "position_x": 33,
             "position_y": 17,
-            "position_x_mobile": 50,
-            "position_y_mobile": 50,
-            "font_size_mobile": 16,
-            "icon_size_mobile": 40
+            "icon_size_sd": 40,
+            "position_x_mobile": 23,
+            "position_y_mobile": 31,
+            "font_size_mobile": 14,
+            "icon_size_mobile": 20,
+            "aos_animation": "fade-up"
           },
           "blocks": {}
         },
@@ -1819,17 +2082,20 @@
           "type": "tl-location-marker",
           "name": "TL Location Marker",
           "settings": {
+            "parent_class": "t-tl-marker_offset-10-y",
             "custom_class": "",
-            "location_name": "Maple Ridge",
+            "location_name": "<p>Maple Ridge</p>",
             "font_size": 16,
             "location_icon": "shopify://shop_images/Group_2.png",
             "icon_size": 40,
             "position_x": 50,
             "position_y": 18,
-            "position_x_mobile": 50,
-            "position_y_mobile": 50,
-            "font_size_mobile": 16,
-            "icon_size_mobile": 40
+            "icon_size_sd": 30,
+            "position_x_mobile": 52,
+            "position_y_mobile": 29,
+            "font_size_mobile": 14,
+            "icon_size_mobile": 20,
+            "aos_animation": "fade-up"
           },
           "blocks": {}
         },
@@ -1837,17 +2103,20 @@
           "type": "tl-location-marker",
           "name": "TL Location Marker",
           "settings": {
+            "parent_class": "t-tl-marker_offset-10-y",
             "custom_class": "",
-            "location_name": "Pitt Meadows",
+            "location_name": "<p>Pitt Meadows</p>",
             "font_size": 11,
             "location_icon": "shopify://shop_images/Group_2.png",
             "icon_size": 28,
             "position_x": 70,
             "position_y": 18,
-            "position_x_mobile": 50,
-            "position_y_mobile": 50,
-            "font_size_mobile": 16,
-            "icon_size_mobile": 40
+            "icon_size_sd": 28,
+            "position_x_mobile": 73,
+            "position_y_mobile": 27,
+            "font_size_mobile": 14,
+            "icon_size_mobile": 20,
+            "aos_animation": "fade-up"
           },
           "blocks": {}
         },
@@ -1855,17 +2124,20 @@
           "type": "tl-location-marker",
           "name": "TL Location Marker",
           "settings": {
-            "custom_class": "",
-            "location_name": "New Wesminister",
+            "parent_class": "t-tl-marker_offset-10-x t-tl-marker_offset-10-y",
+            "custom_class": "drop-shadow fs-m5",
+            "location_name": "<p>New<br/>Wesminister</p>",
             "font_size": 19,
             "location_icon": "shopify://shop_images/Group_2.png",
             "icon_size": 38,
             "position_x": 87,
-            "position_y": 24,
-            "position_x_mobile": 50,
-            "position_y_mobile": 50,
-            "font_size_mobile": 16,
-            "icon_size_mobile": 40
+            "position_y": 21,
+            "icon_size_sd": 38,
+            "position_x_mobile": 80,
+            "position_y_mobile": 39,
+            "font_size_mobile": 14,
+            "icon_size_mobile": 20,
+            "aos_animation": "fade-up"
           },
           "blocks": {}
         }
@@ -1880,9 +2152,10 @@
       "name": "TL Location Map",
       "settings": {
         "background_image": "shopify://shop_images/5cf6c64eeacfa20519323f22bbb8e00d3e660ac1.png",
-        "logo_width": 180,
+        "logo": "shopify://shop_images/PNG__2.png",
+        "logo_width": 300,
         "logo_width_mobile": 120,
-        "height_desktop": 620,
+        "height_desktop": 800,
         "height_mobile": 600
       }
     },
@@ -1902,6 +2175,7 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
+            "aos_animation": "none",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -1943,6 +2217,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 12,
+                "aos_animation": "none",
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1975,7 +2250,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "tl-small-heading ls-10",
+                    "custom_class": "tl-small-heading ls-10 fs-20",
                     "text": "<p>WHY LOG AN' TOW</p>",
                     "width": "fit-content",
                     "max_width": "normal",
@@ -1987,6 +2262,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
+                    "aos_animation": "fade-up",
                     "text_color": "",
                     "background": false,
                     "background_color": "#00000026",
@@ -2007,7 +2283,7 @@
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "custom_class": "bdr-left bdr-dark pdg-left_40",
+                "custom_class": "bdr-left bdr-dark pdg-left_40 m-bdr-left-0 m-pdg-left_0",
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
@@ -2016,6 +2292,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 0,
+                "aos_animation": "fade-up",
                 "width": "custom",
                 "custom_width": 70,
                 "width_mobile": "fill",
@@ -2048,7 +2325,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "custom_class": "fs-40 ls-n2 fw-400",
+                    "custom_class": "fs-40 ls-n2 fw-400 t-fs-24",
                     "text": "<h3>Built on Local Knowledge and Practical Experience</h3>",
                     "width": "fit-content",
                     "max_width": "narrow",
@@ -2060,6 +2337,7 @@
                     "letter_spacing": "tight",
                     "case": "none",
                     "wrap": "pretty",
+                    "aos_animation": "fade-up",
                     "text_color": "{{ settings.color_palette.color1 }}",
                     "background": false,
                     "background_color": "#00000026",
@@ -2087,6 +2365,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
+                    "aos_animation": "none",
                     "text_color": "",
                     "background": false,
                     "background_color": "#00000026",
@@ -2105,10 +2384,10 @@
                     "size": "pixel",
                     "percent_size": 0,
                     "pixel_size": 128,
-                    "custom_mobile_size": false,
-                    "size_mobile": "percent",
+                    "custom_mobile_size": true,
+                    "size_mobile": "pixel",
                     "percent_size_mobile": 100,
-                    "pixel_size_mobile": 120
+                    "pixel_size_mobile": 60
                   },
                   "blocks": {}
                 },
@@ -2125,6 +2404,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 24,
+                    "aos_animation": "none",
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -2180,6 +2460,7 @@
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
                         "gap": 0,
+                        "aos_animation": "none",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -2212,7 +2493,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "custom_class": "",
+                            "custom_class": "t-fs-18 fw-400",
                             "text": "<h4>Local Waterway Knowledge</h4>",
                             "width": "fit-content",
                             "max_width": "normal",
@@ -2224,6 +2505,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
@@ -2239,7 +2521,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "custom_class": "",
+                            "custom_class": "t-fs-14",
                             "text": "<p>Deep familiarity with Fraser River conditions and Lower Mainland waterways.</p>",
                             "width": "100%",
                             "max_width": "none",
@@ -2251,6 +2533,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "",
                             "background": false,
                             "background_color": "#00000026",
@@ -2287,6 +2570,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 24,
+                    "aos_animation": "none",
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -2342,6 +2626,7 @@
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
                         "gap": 0,
+                        "aos_animation": "none",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -2374,7 +2659,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "custom_class": "",
+                            "custom_class": "t-fs-18 fw-400",
                             "text": "<h3>Reliable and Responsive</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
@@ -2386,6 +2671,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
@@ -2413,6 +2699,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "",
                             "background": false,
                             "background_color": "#00000026",
@@ -2449,6 +2736,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 24,
+                    "aos_animation": "none",
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -2504,6 +2792,7 @@
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
                         "gap": 0,
+                        "aos_animation": "none",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -2536,7 +2825,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "custom_class": "",
+                            "custom_class": "t-fs-18 fw-400",
                             "text": "<h3>Specialized Marine Equipment</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
@@ -2548,6 +2837,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
@@ -2563,7 +2853,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "custom_class": "",
+                            "custom_class": "t-fs-14",
                             "text": "<p>Equipped for towing, salvage, and recovery work across varied conditions.</p>",
                             "width": "fit-content",
                             "max_width": "none",
@@ -2575,6 +2865,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "",
                             "background": false,
                             "background_color": "#00000026",
@@ -2611,6 +2902,7 @@
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 24,
+                    "aos_animation": "none",
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
@@ -2666,6 +2958,7 @@
                         "horizontal_alignment_flex_direction_column": "flex-start",
                         "vertical_alignment_flex_direction_column": "center",
                         "gap": 0,
+                        "aos_animation": "none",
                         "width": "fill",
                         "custom_width": 100,
                         "width_mobile": "fill",
@@ -2698,7 +2991,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "custom_class": "",
+                            "custom_class": "t-fs-18 fw-400",
                             "text": "<h3>Safety First</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
@@ -2710,6 +3003,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "{{ settings.color_palette.color1 }}",
                             "background": false,
                             "background_color": "#00000026",
@@ -2725,7 +3019,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "custom_class": "",
+                            "custom_class": "t-fs-14",
                             "text": "<p>Deep familiarity with Fraser River conditions and Lower Mainland waterways.</p>",
                             "width": "fit-content",
                             "max_width": "none",
@@ -2737,6 +3031,7 @@
                             "letter_spacing": "normal",
                             "case": "none",
                             "wrap": "pretty",
+                            "aos_animation": "none",
                             "text_color": "",
                             "background": false,
                             "background_color": "#00000026",
@@ -2783,6 +3078,7 @@
       ],
       "name": "t:names.custom_section",
       "settings": {
+        "custom_id": "",
         "custom_class": "section-grain-overlay",
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -2811,15 +3107,633 @@
         "padding-block-start": 0,
         "padding-block-end": 40
       }
+    },
+    "section_VTJmbn": {
+      "type": "section",
+      "blocks": {
+        "group_B4pEhb": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "custom_class": "bdr-top bdr-light",
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "aos_animation": "none",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "rgba(0,0,0,0)",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 80,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_QPJdhU": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "custom_class": "",
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "aos_animation": "none",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_6zYXzP": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "custom_class": "tl-small-heading ls-10 fs-20",
+                    "text": "<p>GET IN TOUCH</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "aos_animation": "fade-up",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 50,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_6zYXzP"
+              ]
+            },
+            "group_Eeg48b": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "custom_class": "bdr-left bdr-dark pdg-left_40 m-bdr-left-0 m-pdg-left_0",
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 0,
+                "aos_animation": "fade-up",
+                "width": "custom",
+                "custom_width": 70,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_QDAgeA": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "custom_class": "fs-32 ls-n2 fw-400 t-fs-24",
+                    "text": "<h3>Need urgent assistance?</h3>",
+                    "width": "fit-content",
+                    "max_width": "narrow",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "2.5rem",
+                    "line_height": "normal",
+                    "letter_spacing": "tight",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "aos_animation": "fade-up",
+                    "text_color": "{{ settings.color_palette.color2 }}",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 50,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_rrNfKa": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "custom_class": "",
+                    "text": "<p>Call us directly for immediate support.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "aos_animation": "fade-up",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_Kz4i8r": {
+                  "type": "spacer",
+                  "name": "t:names.spacer",
+                  "settings": {
+                    "size": "pixel",
+                    "percent_size": 0,
+                    "pixel_size": 0,
+                    "custom_mobile_size": false,
+                    "size_mobile": "pixel",
+                    "percent_size_mobile": 100,
+                    "pixel_size_mobile": 60
+                  },
+                  "blocks": {}
+                },
+                "group_QpPmEz": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "custom_class": "pdg-top_24  pdg-bottom_24 bdr-dark",
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 24,
+                    "aos_animation": "none",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_TrMAiJ": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "custom_class": "",
+                        "icon": "price_tag",
+                        "image_upload": "shopify://shop_images/fi_297160.png",
+                        "width": 40,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "icon_color": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_Ge3WCF": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "custom_class": "",
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 0,
+                        "aos_animation": "none",
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "background_media": "none",
+                        "background_color": "",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_color": "",
+                        "border_radius": 0,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "placeholder": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "text_rJ9fbH": {
+                          "type": "text",
+                          "name": "t:names.heading",
+                          "settings": {
+                            "custom_class": "fs-20 t-fs-18 fw-400 ls-n2",
+                            "text": "<h4>Call</h4>",
+                            "width": "fit-content",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-heading--family)",
+                            "font_size": "1.25rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "aos_animation": "none",
+                            "text_color": "{{ settings.color_palette.color2 }}",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "text_KgwRgJ": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "custom_class": "t-fs-14",
+                            "text": "<p>604-889-2193</p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1.125rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "aos_animation": "none",
+                            "text_color": "",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_rJ9fbH",
+                        "text_KgwRgJ"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "icon_TrMAiJ",
+                    "group_Ge3WCF"
+                  ]
+                },
+                "group_Ef8NAK": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "custom_class": "bdr-top bdr-bottom pdg-top_24  pdg-bottom_24 bdr-light",
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 24,
+                    "aos_animation": "none",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_9wEwKM": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "custom_class": "",
+                        "icon": "price_tag",
+                        "image_upload": "shopify://shop_images/fi_1161776.png",
+                        "width": 40,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "icon_color": ""
+                      },
+                      "blocks": {}
+                    },
+                    "group_z6tcC7": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "custom_class": "",
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 0,
+                        "aos_animation": "none",
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "background_media": "none",
+                        "background_color": "",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_color": "",
+                        "border_radius": 0,
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "placeholder": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "text_DaYAWp": {
+                          "type": "text",
+                          "name": "t:names.heading",
+                          "settings": {
+                            "custom_class": "fs-20 t-fs-18 fw-400 ls-n2",
+                            "text": "<h4>Email</h4>",
+                            "width": "fit-content",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-heading--family)",
+                            "font_size": "1.25rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "aos_animation": "none",
+                            "text_color": "{{ settings.color_palette.color2 }}",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "text_JcKLkE": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "custom_class": "fs-18 fw-500 t-fs-14",
+                            "text": "<p>info@loganttow.ca</p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1.125rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "aos_animation": "none",
+                            "text_color": "",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_DaYAWp",
+                        "text_JcKLkE"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "icon_9wEwKM",
+                    "group_z6tcC7"
+                  ]
+                }
+              },
+              "block_order": [
+                "text_QDAgeA",
+                "text_rrNfKa",
+                "spacer_Kz4i8r",
+                "group_QpPmEz",
+                "group_Ef8NAK"
+              ]
+            }
+          },
+          "block_order": [
+            "group_QPJdhU",
+            "group_Eeg48b"
+          ]
+        }
+      },
+      "block_order": [
+        "group_B4pEhb"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "custom_id": "contact-section",
+        "custom_class": "section-grain-overlay",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.color1 }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
     "l_t_hero_XJCJec",
     "section_EechWc",
+    "custom_liquid_VRiQcw",
     "section_mBiQbj",
     "section_gM8Jfk",
+    "tl_slider_section_aptTL7",
     "section_X7xF7Q",
     "tl_location_map_aWqJFz",
-    "section_aJPbRi"
+    "section_aJPbRi",
+    "section_VTJmbn"
   ]
 }
