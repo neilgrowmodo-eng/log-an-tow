@@ -21,7 +21,6 @@
     minmax(260px, 330px)
     minmax(0, 1fr);
 
-  gap: 36px;
 
   width: 100%;
 
@@ -301,6 +300,9 @@
   margin-top: 56px;
 
   padding-right: clamp(24px, 5vw, 80px);
+  padding-top: 36px;
+  border-top: 1px solid rgb(50 55 62 / 35%);
+  padding-left: 9%;
 }
 
 
@@ -567,4 +569,11 @@
     height: 32px;
   }
 
+}
+
+@media screen and (max-width: 749px) {
+  .tl-marine-work__heading,
+  .tl-marine-work__body {
+    text-align: center;
+  }
 }

@@ -32,6 +32,7 @@
     {{ settings.section_class }}
     {{ class }}
     {% if background_color != blank %} color-custom-{{ block_id }}{% endif %}
+    {% if settings.custom_id != blank %} {{ settings.custom_id }} {% endif %}
   "
   style="
     {% render 'border-override', settings: settings %}

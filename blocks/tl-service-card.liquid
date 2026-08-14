@@ -125,64 +125,6 @@
     box-sizing: border-box;
   }
 
-  /* ========================================================
-     TOP
-     ======================================================== */
-
-  .tl-service-card__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .tl-service-card__number {
-    margin: 0;
-
-    color: inherit;
-
-    font-family: var(--font-body-family);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-  }
-
-  .tl-service-card__indicator {
-    position: relative;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 20px;
-    flex-shrink: 0;
-    border: 1px solid currentColor;
-    border-radius: 40%;
-  }
-
-  .tl-service-card__indicator::before,
-  .tl-service-card__indicator::after {
-    content: "";
-
-    position: absolute;
-
-    width: 12px;
-    height: 1px;
-
-    background: currentColor;
-  }
-
-  .tl-service-card__front .tl-service-card__indicator::after {
-    transform: rotate(90deg);
-  }
-
-  .tl-service-card__back .tl-service-card__indicator::before {
-    transform: rotate(45deg);
-  }
-
-  .tl-service-card__back .tl-service-card__indicator::after {
-    transform: rotate(-45deg);
-  }
-
   .tl-service-card__overlay {
     content: "";
     position: absolute;
@@ -370,4 +312,179 @@
       font-size: 14px;
     }
   }
+
+  /* ========================================================
+   TOUCH + KEYBOARD INTERACTION
+   ======================================================== */
+
+  /*
+  * JS-opened state.
+  * Used primarily for touch and keyboard users.
+  */
+  .tl-service-card.is-open .tl-service-card__back {
+    transform: translateY(0);
+    visibility: visible;
+
+    transition:
+      transform var(--tl-card-duration) var(--tl-card-ease),
+      visibility 0s linear 0s;
+  }
+
+
+  /*
+  * Invisible native button covering the entire card.
+  *
+  * Gives us native keyboard support:
+  * - Tab
+  * - Enter
+  * - Space
+  */
+  .tl-service-card__toggle {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    border-radius: inherit;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
+  /*
+  * Don't show the browser's default button outline.
+  * We'll put the focus indication around the card.
+  */
+  .tl-service-card__toggle:focus {
+    outline: none;
+  }
+
+
+  /*
+  * Visible keyboard focus.
+  */
+  .tl-service-card:has(.tl-service-card__toggle:focus-visible) {
+    outline: 2px solid var(--tl-first-text);
+    outline-offset: 4px;
+  }
+
+
+  /*
+  * Desktop mouse users already use hover.
+  *
+  * The button remains keyboard-focusable but doesn't
+  * interfere with normal mouse hover behavior.
+  */
+  @media (hover: hover) and (pointer: fine) {
+    .tl-service-card__toggle {
+      pointer-events: none;
+    }
+  }
 {% endstyle %}
+<script>
+  (() => {
+    if (window.tlServiceCardInitialized) return;
+
+    window.tlServiceCardInitialized = true;
+
+    const CARD_SELECTOR = '.tl-service-card';
+    const TOGGLE_SELECTOR = '.tl-service-card__toggle';
+    const BACK_SELECTOR = '.tl-service-card__back';
+
+
+    function setCardState(card, isOpen) {
+      const toggle = card.querySelector(TOGGLE_SELECTOR);
+      const back = card.querySelector(BACK_SELECTOR);
+
+      if (!toggle || !back) return;
+
+      card.classList.toggle('is-open', isOpen);
+
+      toggle.setAttribute(
+        'aria-expanded',
+        String(isOpen)
+      );
+
+      back.setAttribute(
+        'aria-hidden',
+        String(!isOpen)
+      );
+
+      const label = isOpen
+        ? toggle.dataset.closeLabel
+        : toggle.dataset.openLabel;
+
+      if (label) {
+        toggle.setAttribute(
+          'aria-label',
+          label
+        );
+      }
+    }
+
+
+    /*
+    * Native button automatically translates:
+    *
+    * Mobile tap
+    * Keyboard Enter
+    * Keyboard Space
+    *
+    * into a click event.
+    */
+    document.addEventListener('click', (event) => {
+      const toggle = event.target.closest?.(
+        TOGGLE_SELECTOR
+      );
+
+      if (!toggle) return;
+
+      const card = toggle.closest(
+        CARD_SELECTOR
+      );
+
+      if (!card) return;
+
+      const isOpen = card.classList.contains(
+        'is-open'
+      );
+
+      setCardState(
+        card,
+        !isOpen
+      );
+    });
+
+
+    /*
+    * Escape closes an opened card.
+    */
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+
+      const card = event.target.closest?.(
+        CARD_SELECTOR
+      );
+
+      if (!card) return;
+
+      if (!card.classList.contains('is-open')) {
+        return;
+      }
+
+      setCardState(
+        card,
+        false
+      );
+    });
+  })();
+</script>

@@ -67,6 +67,9 @@
   --tl-padding-left: 40px;
   --tl-padding-right: 40px;
 
+  --tl-padding-left-header-button: 40px;
+  --tl-padding-right-header-button: 40px;
+
   --tl-padding-left-hover: 10px;
   --tl-padding-right-hover: 40px;
 
@@ -75,8 +78,14 @@
   --tl-padding-left_mobile: 30px;
   --tl-padding-right_mobile: 10px;
 
+  --tl-padding-left_mobile-header-button: 35px;
+  --tl-padding-right_mobile-header-button: 10px;
+
   --tl-padding-left-hover_mobile: 10px;
   --tl-padding-right-hover_mobile: 30px;
+
+  --tl-padding-left-hover_mobile-header-button: 10px;
+  --tl-padding-right-hover_mobile-header-button: 35px;
 
   position: relative;
 
@@ -101,6 +110,7 @@
 .tl-sweep-button_color-1 {
     --tl-marker-color: #F6F1E7;
     --tl-arrow-color: #26313c;
+    color: #32373E;
 }
 
 .tl-sweep-button_color-2 {
@@ -302,28 +312,54 @@
   border: 0;
 }
 
-.w-250 {width: 250px;}
+.w-250px {width: 250px;}
 .header-actions--text {
   height: 100%;
 }
+
+.w-100 {width: 100%;}
+.w-300px {width: 300px;}
+
 .header a.tl-sweep-button {
   transition: padding 0.5s
 }
 
+.white-space-normal { white-space: normal;}
+
+
+.header-call-button .tl-sweep-button {
+  padding-left: var(--tl-padding-left-header-button);
+  padding-right: var(--tl-padding-right-header-button)
+}
+
+.header-call-button .tl-sweep-button:hover {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .hide-dash {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 749px) {
- 
-
-  .w-250 {width: 100%;}
 
   .header-call-button .tl-sweep-button {
-    padding-left: var(--tl-padding-left_mobile);
-    padding-right: var(--tl-padding-right_mobile)
+    padding-left: var(--tl-padding-left_mobile-header-button);
+    padding-right: var(--tl-padding-right_mobile-header-button)
   }
 
   /* Hover styling */
   .header-call-button .tl-sweep-button:hover {
-    padding-left: var(--tl-padding-left-hover_mobile);
-    padding-right: var(--tl-padding-right-hover_mobile)
+    padding-left: var(--tl-padding-left-hover_mobile-header-button);
+    padding-right: var(--tl-padding-right-hover_mobile-header-button)
   }
+
+  .header-call-button a {
+    min-width: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header-call-button a {min-width: unset; width: 120px;}
 }

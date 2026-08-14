@@ -9,7 +9,7 @@
     about: '#about-section',
     services: '#services-section',
     gallery: '#gallery-section',
-    contact: '#contact-section'
+    'request a quote': '#contact-section'
   };
 
 

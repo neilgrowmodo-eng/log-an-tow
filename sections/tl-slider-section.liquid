@@ -10,10 +10,10 @@
 		background-color: {{ section.settings.background_color }};
 	}
 {%- endstyle -%}
-
+<div id="gallery-section" caller-only></div>
 <section
   id="TlMarineWork-{{ section.id }}"
-  class="tl-marine-work"
+  class="tl-marine-work section-grain-overlay"
 >
   <div class="tl-marine-work__inner">
 
@@ -342,7 +342,7 @@
 {
   "name": "TL Marine Work Slider",
   "tag": "section",
-  "class": "section section--tl-marine-work-slider",
+  "class": "section section--tl-marine-work-slider section-grain-overlay",
   "max_blocks": 12,
   "settings": [
     {

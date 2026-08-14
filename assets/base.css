@@ -2276,19 +2276,231 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   z-index: 1;
 }
 
-.bdr-top {border-top: 0.5px solid;}
-.bdr-left {border-left: 0.5px solid;}
-.bdr-right {border-right: 0.5px solid;}
-.bdr-bottom {border-bottom: 0.5px solid;}
+/* =========================================
+   BORDER BASE
+   ========================================= */
+
+.bdr-top,
+.bdr-right,
+.bdr-bottom,
+.bdr-left {
+  --bdr-size: 0.5px;
+  --bdr-color: currentColor;
+}
+
+
+/* =========================================
+   BORDER SIDES
+   ========================================= */
+
+.bdr-top {
+  border-top: var(--bdr-size) solid var(--bdr-color);
+}
+
+.bdr-right {
+  border-right: var(--bdr-size) solid var(--bdr-color);
+}
+
+.bdr-bottom {
+  border-bottom: var(--bdr-size) solid var(--bdr-color);
+}
+
+.bdr-left {
+  border-left: var(--bdr-size) solid var(--bdr-color);
+}
+
+
+/* =========================================
+   BORDER COLORS
+   ========================================= */
+
+.bdr-light {
+  --bdr-color: #F6F1E7;
+}
+
+.bdr-dark {
+  --bdr-color: #32373E;
+}
+
+.bdr-gold {
+  --bdr-color: #D4A857;
+}
+
+/* =========================================
+   ANIMATED BORDER
+   ========================================= */
+
+.bdr-animate {
+  position: relative;
+
+  --bdr-top-width: 0%;
+  --bdr-right-height: 0%;
+  --bdr-bottom-width: 0%;
+  --bdr-left-height: 0%;
+}
+
+
+/*
+ * Hide the normal border while retaining
+ * the same border space.
+ */
+
+.bdr-animate.bdr-top {
+  border-top-color: transparent;
+}
+
+.bdr-animate.bdr-right {
+  border-right-color: transparent;
+}
+
+.bdr-animate.bdr-bottom {
+  border-bottom-color: transparent;
+}
+
+.bdr-animate.bdr-left {
+  border-left-color: transparent;
+}
+
+
+/* ========================================
+   SCROLL BORDER ANIMATION
+   ======================================== */
+
+.bdr-scroll {
+  position: relative;
+
+  --bdr-size: 0.5px;
+
+  --bdr-top-size: 0%;
+  --bdr-right-size: 0%;
+  --bdr-bottom-size: 0%;
+  --bdr-left-size: 0%;
+
+  --bdr-top-target: 0%;
+  --bdr-right-target: 0%;
+  --bdr-bottom-target: 0%;
+  --bdr-left-target: 0%;
+}
+
+
+/* Which sides should eventually appear */
+
+.bdr-scroll.bdr-top {
+  --bdr-top-target: 100%;
+  border-top-color: transparent;
+}
+
+.bdr-scroll.bdr-right {
+  --bdr-right-target: 100%;
+  border-right-color: transparent;
+}
+
+.bdr-scroll.bdr-bottom {
+  --bdr-bottom-target: 100%;
+  border-bottom-color: transparent;
+}
+
+.bdr-scroll.bdr-left {
+  --bdr-left-target: 100%;
+  border-left-color: transparent;
+}
+
+
+/* Animated borders */
+
+.bdr-scroll::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  pointer-events: none;
+
+  border-radius: inherit;
+
+  background-image:
+    linear-gradient(
+      to right,
+      var(--bdr-color),
+      var(--bdr-color)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--bdr-color),
+      var(--bdr-color)
+    ),
+    linear-gradient(
+      to left,
+      var(--bdr-color),
+      var(--bdr-color)
+    ),
+    linear-gradient(
+      to top,
+      var(--bdr-color),
+      var(--bdr-color)
+    );
+
+  background-repeat: no-repeat;
+
+  /*
+   * TOP    = left → right
+   * RIGHT  = top → bottom
+   * BOTTOM = right → left
+   * LEFT   = bottom → top
+   */
+  background-position:
+    top left,
+    top right,
+    bottom right,
+    bottom left;
+
+  background-size:
+    var(--bdr-top-size) var(--bdr-size),
+    var(--bdr-size) var(--bdr-right-size),
+    var(--bdr-bottom-size) var(--bdr-size),
+    var(--bdr-size) var(--bdr-left-size);
+
+  transition:
+    background-size
+    5s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* Triggered by JS */
+
+.bdr-scroll.is-inview {
+  --bdr-top-size: var(--bdr-top-target);
+  --bdr-right-size: var(--bdr-right-target);
+  --bdr-bottom-size: var(--bdr-bottom-target);
+  --bdr-left-size: var(--bdr-left-target);
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .bdr-scroll::before {
+    transition: none;
+  }
+}
+
+.pdg-top_80 {padding-top: 80px;}
+.pdg-bottom_80 {padding-bottom: 80px;}
+.pdg-left_80 {padding-left: 80px;}
+.pdg-right_80 {padding-right: 80px;}
 
 .pdg-top_40 {padding-top: 40px;}
 .pdg-bottom_40 {padding-bottom: 40px;}
 .pdg-left_40 {padding-left: 40px;}
 .pdg-right_40 {padding-right: 40px;}
+
 .pdg-top_24 {padding-top: 24px;}
 .pdg-bottom_24 {padding-bottom: 24px;}
 .pdg-left_24 {padding-left: 24px;}
 .pdg-right_24 {padding-right: 24px;}
+
 .pdg-top_20 {padding-top: 20px;}
 .pdg-bottom_20 {padding-bottom: 20px;}
 .pdg-left_20 {padding-left: 20px;}
@@ -2326,8 +2538,6 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   .t-fs-72 > * {font-size: 72px;}
   .cs_hide-desktop_flex {display: flex;}
   .cs_hide-mobile_flex {display: none;}
-  .m-ta-center {text-align: center;}
-
   
   .m-bdr-top {border-top: 0.5px solid;}
   .m-bdr-left {border-left: 0.5px solid;}
@@ -2338,6 +2548,8 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   .m-bdr-left-0 {border-left: none;}
   .m-bdr-right-0 {border-right: none;}
   .m-bdr-bottom-0 {border-bottom: none;}
+
+  .bdr-scroll::before {display: none;}
 
   .m-pdg-top_40 {padding-top: 40px;}
   .m-pdg-bottom_40 {padding-bottom: 40px;}
@@ -2359,7 +2571,6 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   .m-pdg-left_0 {padding-left: 0px;}
   .m-pdg-right_0 {padding-right: 0px;}
 
-  .logo-offset {left: unset; bottom: unset; top: 10%; }
   .w-200 {width: 100px;}
 
   .tl-service-card-container {
@@ -2375,10 +2586,6 @@ span.menu-list__link-title {
 
 .ls-n2 > *{letter-spacing: -2%;}
 .ls-10 > *{letter-spacing: 0.1em;}
-
-.bdr-gold {border-color: #D4A857;}
-.bdr-dark {border-color: #32373E;}
-.bdr-light {border-color: #F6F1E7;}
 
 .fw-400 > * {font-weight: 400;}
 .fw-500 > * {font-weight: 500;}
@@ -2424,6 +2631,10 @@ span.menu-list__link-title {
   margin-right: 0.6em;
   background-color: #d4a857;
   vertical-align: 0.02em;
+}
+
+.tl-small-heading-green p::before {
+  background-color: #1f4e39;
 }
 
 .tl-footer-link::before {
@@ -2670,7 +2881,7 @@ span.menu-list__link-title {
 }
 
 .tl-rotating-logo {
-  animation: tl-logo-spin 10s linear infinite;
+  animation: tl-logo-spin 60s linear infinite;
 }
 
 .section--tl-marine-work-slider {padding-top: 80px; padding-bottom: 80px;}
@@ -2702,6 +2913,67 @@ span.menu-list__link-title {
   padding-top: 0;
 }
 
+.ta-center > * {text-align: center}
+.w-24rem {width: 24rem}
+.w-18rem {width: 18rem}
+
+#hero-section,
+#about-section,
+#services-section,
+#gallery-section,
+#contact-section {
+  scroll-margin-top: 120px;
+}
+
+.gold-logo {
+  width: 206px;
+  left: 42%;
+}
+
+.logos-group {column-gap: 80px;}
+
+@media screen and (max-width: 1269px) {
+  .logos-group {column-gap: 50px;}
+}
+
+@media screen and (max-width: 1269px) {
+  .logos-group {column-gap: 30px;}
+}
+
+@media screen and (max-width: 1024px) {
+  .w-24rem {width: 100%}
+}
+
+@media screen and (max-width: 1050px) and (min-width: 750px) {
+  .logos-section {flex-direction: column;}
+  .certified-text {border-right: none; border-bottom: 0.5px solid;}
+  .certified-text p {text-align: center;}
+}
+
+
+@media screen and (max-width: 989px) {
+  #hero-section,
+  #about-section,
+  #services-section,
+  #gallery-section,
+  #contact-section {
+    scroll-margin-top: 90px;
+  }
+
+  .gold-logo {left: 38%;}
+}
+
+@media screen and (max-width: 880px) and (min-width: 750px) {
+  .hero-buttons-group {flex-direction: column;}
+  .green-logo {width: 100px;}
+}
+
+
+@media screen and (max-width: 749px) and (min-width: 500px) {
+  .contact-form-container {
+    height: 4%;
+  }
+}
 
 @media screen and (max-width: 749px) {
 
@@ -2710,4 +2982,26 @@ span.menu-list__link-title {
     height: 35px;
     background-size: 30px auto;
   }
+
+  .m-ta-center > * {text-align: center !important}
+  .m-m-auto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact-form-container {height: 40rem;}
+  .m-height-fit {height: fit-content;}
+  .m-absolute {position: absolute;}
+  .request-quote-title-spacing {margin-top: 160px;}
+
+  .logo-offset {left: 0%; bottom: -10%;}
+  .gold-logo {left: 0%; top: 120px;}
+}
+
+@media screen and (max-width: 445px) {
+  .request-quote-title-spacing {margin-top: 200px;}
+  .green-logo {width: 140px;}
+}
+
+@media screen and (max-width: 377px) {
+  .request-quote-title-spacing {margin-top: 220px;}
 }

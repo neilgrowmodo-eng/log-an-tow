@@ -1,5 +1,5 @@
 {%- doc -%}
-  Renders a TL service card with a front state and hover reveal state.
+  Renders a TL service card with a front state and reveal state.
 
   @param {object} block - Shopify theme block
 
@@ -10,7 +10,6 @@
 {%- liquid
   assign block_settings = block.settings
 
-  assign card_number = block_settings.card_number
   assign card_icon = block_settings.card_icon
   assign card_title = block_settings.card_title
 
@@ -33,20 +32,8 @@
   {{ block.shopify_attributes }}
 >
   <div class="tl-service-card__overlay"></div>
+
   <div class="tl-service-card__layer tl-service-card__front">
-
-    <div class="tl-service-card__top">
-      {%- if card_number != blank -%}
-        <span class="tl-service-card__number">
-          {{ card_number | escape }}
-        </span>
-      {%- endif -%}
-
-      <span
-        class="tl-service-card__indicator"
-        aria-hidden="true"
-      ></span>
-    </div>
 
     <div class="tl-service-card__front-content">
 
@@ -72,20 +59,11 @@
     </div>
   </div>
 
-  <div class="tl-service-card__layer tl-service-card__back">
-
-    <div class="tl-service-card__top">
-      {%- if card_number != blank -%}
-        <span class="tl-service-card__number">
-          {{ card_number | escape }}
-        </span>
-      {%- endif -%}
-
-      <span
-        class="tl-service-card__indicator"
-        aria-hidden="true"
-      ></span>
-    </div>
+  <div
+    id="tl-service-card-back-{{ block.id }}"
+    class="tl-service-card__layer tl-service-card__back"
+    aria-hidden="true"
+  >
 
     <div class="tl-service-card__back-content">
 
@@ -103,4 +81,14 @@
 
     </div>
   </div>
+
+  <button
+    type="button"
+    class="tl-service-card__toggle"
+    aria-expanded="false"
+    aria-controls="tl-service-card-back-{{ block.id }}"
+    aria-label="View details for {{ card_title | escape }}"
+    data-open-label="View details for {{ card_title | escape }}"
+    data-close-label="Close details for {{ card_title | escape }}"
+  ></button>
 </div>
